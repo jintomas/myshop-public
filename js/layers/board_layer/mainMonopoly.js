@@ -587,17 +587,8 @@ monopoly.chooseLanguage=function(language){
 
 /*  var language=$('input[name=languageRadio]:checked').val();*/
   var flag = false;
-  if(language == null){
-	  flag = true;
-	  language = "english";
-  }
-
-  let message = "Loading Game...";
-  if(language == "hindi") {
-    message = "गेम लोड हो रहा है...";
-  } else if (language == "marathi") {
-    message = "खेळ लोड करीत आहे...";
-  }
+	language = "simple_chinese";
+  let message = "正在加载游戏...";
   ubsApp.openPopup({
                                          "message" : message,
                                          "header" : "",
@@ -772,13 +763,13 @@ ubsApp.confirmEndGame=function(){
   	    playerConfig.widthOfEachPlayer = (100 / numplayers) - 3;
   	    let player = userArray[i];
   	    playerConfig.playerColor = player.getplayerColor();
-        playerConfig.currentWeekCash = "₹ "+ player.getplayerScore();
-        playerConfig.currentWeekBankBalance = "₹ "+ player.getBankBalance();
+        playerConfig.currentWeekCash = ubsApp.getTranslation("Rs") + " "+ player.getplayerScore();
+        playerConfig.currentWeekBankBalance = ubsApp.getTranslation("Rs") + " "+ player.getBankBalance();
         playerConfig.currentWeekReputationPts = player.getReputationPts();
         playerConfig.currentWeekCredit = player.getCredit();
         playerConfig.currentWeekAdvantageCard = player.getAdvantageCardNumber();
         playerConfig.userName = player.getplayerName();
-        playerConfig.currentInventory = "₹ "+ player.getInventoryScore() * ubsApp.inventoryPerPercentValue + " (" + player.getInventoryScore() + "%" + ")";
+        playerConfig.currentInventory = ubsApp.getTranslation("Rs") + " "+ player.getInventoryScore() * ubsApp.inventoryPerPercentValue + " (" + player.getInventoryScore() + "%" + ")";
         if(i > 0) {
             playerConfig.showBorder = true;
         }
@@ -951,10 +942,10 @@ ubsApp.currentPlayerContents=function(){
     $("#playerId").empty();
 	$("#playerId").html(userArray[playerChance].getplayerName());
 	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks() + "/" + ubsApp.maxNumOfWeeks;
-	document.getElementById("bankBalance").innerHTML="₹ "+userArray[playerChance].getBankBalance();
-	document.getElementById("cash").innerHTML="₹ "+userArray[playerChance].getplayerScore();
-	document.getElementById("debt").innerHTML="₹ "+userArray[playerChance].getCredit();
-	document.getElementById("inventoryValueContent").innerHTML="₹ "+ Math.round((userArray[playerChance].getInventoryScore()*ubsApp.inventoryPerPercentValue));
+	document.getElementById("bankBalance").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getBankBalance();
+	document.getElementById("cash").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getplayerScore();
+	document.getElementById("debt").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getCredit();
+	document.getElementById("inventoryValueContent").innerHTML=ubsApp.getTranslation("Rs") + " "+ Math.round((userArray[playerChance].getInventoryScore()*ubsApp.inventoryPerPercentValue));
 	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
 	document.getElementById("reputationContent").innerHTML=userArray[playerChance].getReputationPts();
 	document.getElementById("advantageCardContent").innerHTML=userArray[playerChance].getAdvantageCardNumber();
