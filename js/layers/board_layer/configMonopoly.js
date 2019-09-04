@@ -5,8 +5,14 @@ monopoly.origpages = {
             "templateId":1,
             "templateType":"static",
             "src":"<div id=\"languageDetails\" style=\"cursor:pointer\" onclick=\"monopoly.chooseLanguage('simple_chinese')\"><label style=\"color:white; cursor:pointer\" for\"simple_chinese\">简体中文</label></div>",
-            "style": "position:absolute;margin-left:15%;padding:10px;border-radius:5px; background-color:black; width:70%;top:30%;"
+            "style": "position:absolute;margin-left:15%;width:70%;padding:10px;border-radius:5px; background-color:black; width:70%;top:30%;"
         },
+        {
+            "templateId": 2,
+            "templateType": "static",
+            "src": "<img src=\"images/guptaji/guptaji_front.png\" style=\"position:absolute; top:20%; width: 12%; height: 40%;\"></img>",
+             /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
+        }
     ],
  
     "Splash":[

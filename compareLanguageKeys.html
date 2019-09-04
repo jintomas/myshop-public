@@ -32,9 +32,17 @@ $(document).ready(function(){
   jsElmM.type = "text/javascript";
   jsElmM.src = "js/language_translations/marathi.js";
   document.head.appendChild(jsElmM);
+
+        jsElmH.onload = function() {
+          ubsApp.simpleChineseTranslation = $.extend({}, ubsApp.translation);
+          var jsElmM = document.createElement('script');
+          jsElmM.type = "text/javascript";
+          jsElmM.src = "js/language_translations/simple_chinese.js";
+          document.head.appendChild(jsElmM);
+
   
   jsElmM.onload=function(){
-	ubsApp.marathiTranslation = $.extend({}, ubsApp.translation);
+	          ubsApp.simpleChineseTranslation = $.extend({}, ubsApp.translation);
 	
 	 $.each(ubsApp.englishTransaltion, function(key,val){
         if(!ubsApp.hindiTransation[key]) {
@@ -43,12 +51,17 @@ $(document).ready(function(){
 		
 		 if(!ubsApp.marathiTranslation[key]) {
 			$('#results').append(key + " not in Marathi <br>"); 
-		}
+    }
+    
+    if (!ubsApp.simpleChineseTranslation[key]) {
+      $('#results').append(key + " not in Simple Chinese <br>")
+    }
 		
     });
   }
 	}
   }
+}
 	
 });
 
