@@ -2,12 +2,32 @@ analytics = {
   url: "/china/analytics"
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   analytics.initializePages();
+
+  let diceContainer = null;
+
+  var observer = new MutationObserver(function (mutations) {
+    if (diceContainer == null) {
+      let found = $('#monopolyBase').find('.container-dice');
+      if (found.length) {
+        diceContainer = found[0];
+      }
+    }
+    if (diceContainer == null) {
+      return;
+    }
+
+    diceContainer.style.visibility = $("#popupBackground").is(":visible") ? "hidden" : "visible"
+  });
+  var target = document.querySelector("#popupBackground");
+  observer.observe(target, {
+    attributes: true
+  });
 
   analytics.before(ubsApp, "restartGame", () => {
     monopoly.renderPageforBoard(analytics.pages.Login);
-    return false;
+    return true;
   });
 
   $("#monopolyBase, #templateContent, #helpContent").on(
@@ -23,7 +43,7 @@ $(document).ready(function() {
 analytics.before = (object, method, callback) => {
   let originalMethod = object[method];
   object["old_" + method] = originalMethod;
-  object[method] = function() {
+  object[method] = function () {
     let shouldContinue = callback.apply(object, arguments);
     if (shouldContinue) {
       originalMethod.apply(object, arguments);
@@ -34,7 +54,7 @@ analytics.before = (object, method, callback) => {
 analytics.after = (object, method, callback) => {
   let originalMethod = object[method];
   object["old_" + method] = originalMethod;
-  object[method] = function() {
+  object[method] = function () {
     originalMethod.apply(object, arguments);
     callback.apply(object, arguments);
   };
