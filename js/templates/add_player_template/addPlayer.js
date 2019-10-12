@@ -9,16 +9,18 @@ ubsApp.getAddPlayerTemplate=function(templateConfig,tempVar){
 ubsApp.student = {}
 ubsApp.studentIdSuffix = "ubs"
 ubsApp.openAddPlayerTemplate = function(){
+
 	ubsApp.startCurrentScenario();
 	ubsApp.renderPageByName("addPlayerPage");
 }
+
 
 ubsApp.addNewPlayer = function() {
     $("#addPlayerValidationMessage").empty();
     let playerName = $("#playerNameInput").val();
     let playerAge = $("#playerAge").val();
     let gender = $("#playerGender").val();
-
+    let org = $("#playerOrg").val()
     let message = "";
 
     if(!playerName) {
@@ -27,6 +29,8 @@ ubsApp.addNewPlayer = function() {
         message = ubsApp.getTranslation("ENTER_PLAYER_AGE");
     } else if(!gender) {
         message = ubsApp.getTranslation("ENTER_PLAYER_GENDER");
+    }else if(!org){
+        message = ubsApp.getTranslation("ENTER_PLAYER_ORG");
     }
     if(message) {
         $("#addPlayerValidationMessage").append(message);
@@ -36,6 +40,8 @@ ubsApp.addNewPlayer = function() {
     player.name = playerName;
     player.age = parseInt(playerAge);
     player.gender = gender;
+    player.org = org;
+    player.userdata = {lastScore:0, highScore: 0}
     let players = [];
     players[0] = player;
 
@@ -43,7 +49,7 @@ ubsApp.addNewPlayer = function() {
        Android.addStudents(JSON.stringify(players));
     }
     message = ubsApp.getTranslation("PLAYER_ADDED_SUCCESSFULLY");
-    
+
      if(ubsApp.isAndroidEnabled) {
      try {
               ubsApp.studentArray = JSON.parse(Android.getStudentList());
@@ -52,24 +58,30 @@ ubsApp.addNewPlayer = function() {
          console.log("Erro parsing student array from andriod");
        ubsApp.studentArray=[];
      }
-     } 
+     }
      if(ubsApp.isChinaVer) {
+
          ubsApp.student = {
              StudentId: player.name + ubsApp.studentIdSuffix,
              StudentAge: player.age,
              StudentName: player.name,
-             StudentGender: player.gender
+             StudentGender: player.gender,
+             StudentOrg: player.org
          }
-         let isStudentExist = false;
+         let isStudentExist = false
          for (i = 0; i < ubsApp.studentArray.length; i++) {
-             if (ubsApp.studentArray[i].StudentId === ubsApp.student.StudentId) {
-                 isStudentExist = true;
-                 break;
+             if (ubsApp.studentArray[i].StudentId == ubsApp.student.StudentId) {
+                 isStudentExist = true
+                 break
              }
          }
          if (!isStudentExist) {
-             ubsApp.studentArray.push(ubsApp.student);
-         } else {
+             if(ubsApp.student.StudentData == undefined){
+                 ubsApp.student.StudentData = JSON.stringify({lastScore:0, highScore: 0})
+             }
+            ubsApp.studentArray.push(ubsApp.student)
+         }
+         else{
              message = ubsApp.getTranslation("PLAYER_ADDED_FAILED");
          }
      }
@@ -77,11 +89,12 @@ ubsApp.addNewPlayer = function() {
         ubsApp.studentArray = JSON.parse("[{\r\n\t\"StudentId\": \"STU111451\",\r\n\t\"StudentAge\": 12,\"StudentGender\": \"male\",\"StudentName\": \"JITENDRA RAMSAJIVAN\"\r\n}, {\r\n\t\"StudentId\": \"STU111453\",\r\n\t\"StudentAge\": 24,\"StudentGender\": \"female\",\"StudentName\": \"ANUSHKA AMIT TIVARI\"\r\n}, {\r\n\t\"StudentId\": \"STU111448\",\r\n\t\"StudentAge\": 32,\"StudentGender\": \"male\",\"StudentName\": \"ANUBHAV SANTOSH\"\r\n}]");
 
      }
-     ubsApp.openResultPopup({
-        "message": message,
-        "header": "",
-        "headerStyle": "text-align: center, color: black; font-weight: 700;"
-     });
+    ubsApp.openResultPopup({
+        "message" : message,
+        "header" : "",
+        "headerStyle" : "text-align: center;  color: black; font-weight: 700; "
+    });
+     localStorage.setItem('users', ubsApp.studentArray)
      ubsApp.populateStudentArray(ubsApp.studentArray);
     let numberOfPlayers = 4;
 
@@ -138,23 +151,26 @@ ubsApp.updatePlayer = function(studentId) {
                            "headerStyle" : "text-align: center;  color: black; font-weight: 700; "
                            });
          if(ubsApp.isAndroidEnabled) {
-         try {
-                  ubsApp.studentArray = JSON.parse(Android.getStudentList());
+             try {
+                 ubsApp.studentArray = JSON.parse(Android.getStudentList());
 
-         } catch(err) {
-             console.log("Erro parsing student array from andriod");
-           ubsApp.studentArray=[];
-         }
-         }
-         else if (ubsApp.isChinaVer) {
-             ubsApp.student = {StudentId: player.StudentID, StudentName: player.StudentName, StudentAge: player.StudentAge, StudentGender: player.StudentGender};
-             for (i = 0; i < ubsApp.studentArray.length; i++) {
-                 if (ubsApp.studentArray[i].StudentId === studentId) {
-                     ubsApp.studentArray[i] = ubsApp.student;
-                 }
+             } catch (err) {
+                 console.log("Erro parsing student array from andriod");
+                 ubsApp.studentArray = [];
              }
          }
-         else {
+         else if(ubsApp.isChinaVer){
+            for(i =0; i<ubsApp.studentArray.length; i++){
+                console.log(ubsApp.studentArray[i].StudentData)
+                if(ubsApp.studentArray[i].StudentId == studentId){
+                    console.log(ubsApp.studentArray[i])
+                    ubsApp.student = {StudentId: player.StudentID, StudentName: player.StudentName,
+                        StudentAge: player.StudentAge, StudentGender:player.StudentGender,
+                        StudentOrg: ubsApp.studentArray[i].StudentOrg, StudentData: ubsApp.studentArray[i].StudentData}
+                    ubsApp.studentArray[i] = ubsApp.student
+                }
+            }
+         }else {
             ubsApp.studentArray = JSON.parse("[{\r\n\t\"StudentId\": \"STU111451\",\r\n\t\"StudentAge\": 12,\"StudentGender\": \"male\",\"StudentName\": \"JITENDRA new RAMSAJIVAN\"\r\n}, {\r\n\t\"StudentId\": \"STU111453\",\r\n\t\"StudentAge\": 24,\"StudentGender\": \"female\",\"StudentName\": \"ANUSHKA AMIT TIVARI\"\r\n}, {\r\n\t\"StudentId\": \"STU111448\",\r\n\t\"StudentAge\": 32,\"StudentGender\": \"male\",\"StudentName\": \"ANUBHAV SANTOSH\"\r\n}]");
 
          }
@@ -180,7 +196,6 @@ ubsApp.updatePlayer = function(studentId) {
 ubsApp.deletePlayer = function(studentId) {
 
 
-
         if(ubsApp.isAndroidEnabled) {
            Android.deleteStudent(studentId);
         }
@@ -199,14 +214,15 @@ ubsApp.deletePlayer = function(studentId) {
            ubsApp.studentArray=[];
          }
          }
-         else if (ubsApp.isChinaVer) {
-             ubsApp.studentArray = ubsApp.studentArray.filter(function(tempstd){
-                return tempstd.StudentId != studentId;
+         else if(ubsApp.isChinaVer){
+             ubsApp.studentArray = ubsApp.studentArray.filter(function (tempstd) {
+                 return tempstd.StudentId != studentId;
              });
-             if (ubsApp.studentArray.length == 0) {
-                 localStorage.removeItem("users");
+             if(ubsApp.studentArray.length ==0){
+                 localStorage.removeItem('users')
              }
-         } 
+
+         }
          else {
             ubsApp.studentArray = JSON.parse("[{\r\n\t\"StudentId\": \"STU111451\",\r\n\t\"StudentAge\": 12,\"StudentGender\": \"male\",\"StudentName\": \"JITENDRA RAMSAJIVAN\"\r\n}, {\r\n\t\"StudentId\": \"STU111453\",\r\n\t\"StudentAge\": 24,\"StudentGender\": \"female\",\"StudentName\": \"ANUSHKA AMIT TIVARI\"\r\n}, {\r\n\t\"StudentId\": \"STU111448\",\r\n\t\"StudentAge\": 32,\"StudentGender\": \"male\",\"StudentName\": \"ANUBHAV SANTOSH\"\r\n}]");
 

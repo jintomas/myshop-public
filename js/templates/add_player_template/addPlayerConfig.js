@@ -10,6 +10,7 @@ ubsApp.addPlayerConfig={
                 "name":"{{PLAYER_NAME}}",
                 "age":"{{AGE}}",
                 "gender" : "{{GENDER}}",
+                "org":"{{ORG}}",
                 "cancel":"{{cancelTitle}}",
                 "add":"{{ADD}}",
                 "MALE" : "{{MALE}}",

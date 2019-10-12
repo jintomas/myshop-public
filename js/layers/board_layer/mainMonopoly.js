@@ -281,10 +281,7 @@ monopoly.myMove = function(count, pId, currentPos) {
       
       blockNo %= boardConfig.blocks;
       if(blockNo==0){
-        let weekContentElem = document.getElementById("weekContent");
-        if (weekContentElem) {
-          weekContentElem.innerHTML=userArray[playerChance].getWeeks() + "/" + ubsApp.maxNumOfWeeks;
-        }
+        document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks() + "/" + ubsApp.maxNumOfWeeks;
       }
       $("#" + blockNo).append(playerToken);
       var audioElement = document.getElementById('p'+pId+'');
@@ -327,19 +324,18 @@ monopoly.rollDice  = function(){
 
 
 monopoly.storePlayerDetails=function(){
-    if(ubsApp.isChinaVer) {
-      if (ubsApp.studentArray.length == 0) {
-        ubsApp.openPopup ({
-          "message": ubsApp.getTranslation('NoPlayer'),
-          "header": ubsApp.getTranslation("ERROR"),
-          "headerStyle": "text-align: center; color: red; font-weight: 700;"
-        });
-        return;
-      } else {
-        localStorage.setItem("users", JSON.stringify(ubsApp.studentArray));
-      }
+    if(ubsApp.isChinaVer){
+        if(ubsApp.studentArray.length == 0){
+            ubsApp.openPopup({
+                "message" : ubsApp.getTranslation("NoPlayer"),
+                "header" : ubsApp.getTranslation("ERROR"),
+                "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+            });
+            return;
+        }else{
+            localStorage.setItem('users', JSON.stringify(ubsApp.studentArray))
+        }
     }
-
     var i=0;
     let computerRequired=false;  //document.getElementById("computer").checked;
     let isOffline = ubsApp.isOfflineMode;
@@ -603,8 +599,19 @@ monopoly.chooseLanguage=function(language){
 
 /*  var language=$('input[name=languageRadio]:checked').val();*/
   var flag = false;
-	language = "simple_chinese";
-  let message = "正在加载游戏...";
+  if(language == null){
+	  flag = true;
+	  language = "english";
+  }
+
+  let message = "Loading Game...";
+  if(language == "hindi") {
+    message = "गेम लोड हो रहा है...";
+  } else if (language == "marathi") {
+    message = "खेळ लोड करीत आहे...";
+  } else if (language == "simple_chinese"){
+      message = "正在加载游戏..."
+  }
   ubsApp.openPopup({
                                          "message" : message,
                                          "header" : "",
@@ -696,14 +703,13 @@ monopoly.startGame=function(){
 
              if(ubsApp.isAndroidEnabled) {
                 ubsApp.studentArray = Android.getStudentList();
-             } if(ubsApp.isChinaVer) {
-               let cachedUsers = localStorage.getItem("users");
-               if (cachedUsers == null || cachedUsers === "undefined") {
-                 ubsApp.studentArray = [];
-               } else {
-                 ubsApp.studentArray = cachedUsers;
-               }
-             } 
+             }if(ubsApp.isChinaVer){
+                 if(localStorage.getItem('users') == "undefined"){
+                     ubsApp.studentArray = []
+                 }else{
+                     ubsApp.studentArray = localStorage.getItem('users')
+                 }
+           }
              else {
                 ubsApp.studentArray = "[{\r\n\t\"StudentId\": \"STU111451\",\r\n\t\"StudentAge\": 12,\"StudentGender\": \"male\",\"StudentName\": \"JITENDRA RAMSAJIVAN\"\r\n}, {\r\n\t\"StudentId\": \"STU111453\",\r\n\t\"StudentAge\": 24,\"StudentGender\": \"female\",\"StudentName\": \"ANUSHKA AMIT TIVARI\"\r\n}, {\r\n\t\"StudentId\": \"STU111448\",\r\n\t\"StudentAge\": 32,\"StudentGender\": \"male\",\"StudentName\": \"ANUBHAV SANTOSH\"\r\n}]";
              }
@@ -725,7 +731,8 @@ monopoly.startGame=function(){
                 }
                 monopoly.initOfflinePlayers();
               }
-           } else {
+           }
+           else {
               try {
                ubsApp.studentArray = JSON.parse(ubsApp.studentArray);
 
@@ -733,6 +740,9 @@ monopoly.startGame=function(){
                                       console.log("Error parsing student array from andriod");
 
                 ubsApp.studentArray=[];
+              }
+              if(ubsApp.isChinaVer && !ubsApp.studentArray){
+                      ubsApp.studentArray = []
               }
                ubsApp.populateStudentArray(ubsApp.studentArray);
               monopoly.renderPageforBoard(monopoly.pages.InitialisePlayers);
@@ -787,13 +797,13 @@ ubsApp.confirmEndGame=function(){
   	    playerConfig.widthOfEachPlayer = (100 / numplayers) - 3;
   	    let player = userArray[i];
   	    playerConfig.playerColor = player.getplayerColor();
-        playerConfig.currentWeekCash = ubsApp.getTranslation("Rs") + " "+ player.getplayerScore();
-        playerConfig.currentWeekBankBalance = ubsApp.getTranslation("Rs") + " "+ player.getBankBalance();
+        playerConfig.currentWeekCash = ubsApp.getTranslation("Rs")+" "+ player.getplayerScore();
+        playerConfig.currentWeekBankBalance = ubsApp.getTranslation("Rs")+" "+ player.getBankBalance();
         playerConfig.currentWeekReputationPts = player.getReputationPts();
         playerConfig.currentWeekCredit = player.getCredit();
         playerConfig.currentWeekAdvantageCard = player.getAdvantageCardNumber();
         playerConfig.userName = player.getplayerName();
-        playerConfig.currentInventory = ubsApp.getTranslation("Rs") + " "+ player.getInventoryScore() * ubsApp.inventoryPerPercentValue + " (" + player.getInventoryScore() + "%" + ")";
+        playerConfig.currentInventory = ubsApp.getTranslation("Rs")+" "+ player.getInventoryScore() * ubsApp.inventoryPerPercentValue + " (" + player.getInventoryScore() + "%" + ")";
         if(i > 0) {
             playerConfig.showBorder = true;
         }
@@ -959,30 +969,25 @@ ubsApp.closeGame = function() {
     if(ubsApp.isAndroidEnabled) {
         Android.endSession();
     }
-
-    if (ubsApp.isChinaVer) {
-      message = ubsApp.getTranslation('CLOSE_GAME');
-      ubsApp.openResultPopup({
-        "message": message,
-        "header": "",
-        "headerStyle": "text-align: center; color: black, font-weight: 700;"
-      });
+    if(ubsApp.isChinaVer){
+        message = ubsApp.getTranslation("CLOSE_GAME")
+        ubsApp.openResultPopup({
+            "message" : message,
+            "header" : "",
+            "headerStyle" : "text-align: center;  color: black; font-weight: 700; "
+        });
     }
 }
 
 
 ubsApp.currentPlayerContents=function(){
     $("#playerId").empty();
-  $("#playerId").html(userArray[playerChance].getplayerName());
-  let weekContentElem = document.getElementById("weekContent");
-  if (weekContentElem == null) {
-    return;
-  }
-  weekContentElem.innerHTML=userArray[playerChance].getWeeks() + "/" + ubsApp.maxNumOfWeeks;
-	document.getElementById("bankBalance").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getBankBalance();
-	document.getElementById("cash").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getplayerScore();
-	document.getElementById("debt").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getCredit();
-	document.getElementById("inventoryValueContent").innerHTML=ubsApp.getTranslation("Rs") + " "+ Math.round((userArray[playerChance].getInventoryScore()*ubsApp.inventoryPerPercentValue));
+	$("#playerId").html(userArray[playerChance].getplayerName());
+	document.getElementById("weekContent").innerHTML=userArray[playerChance].getWeeks() + "/" + ubsApp.maxNumOfWeeks;
+	document.getElementById("bankBalance").innerHTML=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getBankBalance();
+	document.getElementById("cash").innerHTML=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getplayerScore();
+	document.getElementById("debt").innerHTML=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getCredit();
+	document.getElementById("inventoryValueContent").innerHTML=ubsApp.getTranslation("Rs")+" "+ Math.round((userArray[playerChance].getInventoryScore()*ubsApp.inventoryPerPercentValue));
 	document.getElementById("inventoryContent").innerHTML=userArray[playerChance].getInventoryScore()+"%";
 	document.getElementById("reputationContent").innerHTML=userArray[playerChance].getReputationPts();
 	document.getElementById("advantageCardContent").innerHTML=userArray[playerChance].getAdvantageCardNumber();

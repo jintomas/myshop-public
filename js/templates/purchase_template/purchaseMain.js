@@ -3,13 +3,13 @@ let numberOfPaymentModes=1;
 ubsApp.getPurchaseTemplate=function(templateConfig,tempVar){
 	var object={};
 
-	object.bankBalance=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getBankBalance();
-	object.cash=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getplayerScore();
-	object.credit=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getCredit();
+	object.bankBalance=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getBankBalance();
+	object.cash=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getplayerScore();
+	object.credit=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getCredit();
 	object.sliderValue=userArray[playerChance].getInventoryScore();
 	object.currentPlayerName = userArray[playerChance].getplayerName();
-	object.inventoryValue=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getInventoryScore()*1000;
-    object.creditLimit=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getCreditLimit();
+	object.inventoryValue=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getInventoryScore()*1000;
+    object.creditLimit=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getCreditLimit();
     object.openNextMove = ubsApp.openNextMoveAfterPurchase;
     ubsApp.startRecordingTimer(templateConfig);
     templateConfig=$.extend(templateConfig,object);
@@ -22,12 +22,12 @@ ubsApp.updateInventoryLevel=function(value){
     if(parseFloat(value)<parseFloat(userArray[playerChance].getInventoryScore())){	//instead of 20 write userArray[playerChance].getInventoryScore()
         document.getElementById("mySlider").value=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
         document.getElementById("percent").innerHTML=userArray[playerChance].getInventoryScore();	//userArray[playerChance].getInventoryScore()
-        document.getElementById("value").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getInventoryScore()*1000;	//userArray[playerChance].getInventoryScore()*1000;
+        document.getElementById("value").innerHTML=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getInventoryScore()*1000;	//userArray[playerChance].getInventoryScore()*1000;
         ubsApp.fillUp();
     }
     else{
         document.getElementById("percent").innerHTML=parseInt(value);
-        document.getElementById("value").innerHTML=ubsApp.getTranslation("Rs") + " "+parseInt(value*1000);
+        document.getElementById("value").innerHTML=ubsApp.getTranslation("Rs")+" "+parseInt(value*1000);
         ubsApp.fillUp();
     }
     
@@ -150,10 +150,10 @@ else{
         userArray[playerChance].setBankBalance(bankBalanceChanged);
         userArray[playerChance].setCredit(creditChanged);
 
-        document.getElementById("bankBalanceValue").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getBankBalance();
-        document.getElementById("cashValue").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getplayerScore();
-        document.getElementById("creditValue").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getCredit();
-        document.getElementById("creditLimitValue").innerHTML=ubsApp.getTranslation("Rs") + " "+userArray[playerChance].getCreditLimit();
+        document.getElementById("bankBalanceValue").innerHTML=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getBankBalance();
+        document.getElementById("cashValue").innerHTML=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getplayerScore();
+        document.getElementById("creditValue").innerHTML=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getCredit();
+        document.getElementById("creditLimitValue").innerHTML=ubsApp.getTranslation("Rs")+" "+userArray[playerChance].getCreditLimit();
 
         if(!offlinePurchaseClicked)
             ubsApp.nextMove();
