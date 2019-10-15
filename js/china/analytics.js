@@ -1,5 +1,5 @@
 analytics = {
-    url: '/china/analytics/'
+    url: '/china/analytics'
 };
 
 $(document).ready(function () {
@@ -17,8 +17,14 @@ $(document).ready(function () {
             return;
         }
 
-        diceContainer.style.visibility = $("#popupBackground").is(":visible") ? "hidden" : "visible"
-        diceContainer.style.visibility = $("#resultBackground").is(":visible") ? "hidden" : "visible"
+        let status = $("#popupBackground").is(":visible") ? "hidden" : "visible";
+        if (status == 'visible') {
+            status = $("#resultBackground").is(":visible") ? "hidden" : "visible";
+        }
+        if (status == 'visible') {
+            status = $("#quiz").is(":visible") ? "hidden" : "visible";
+        }
+        diceContainer.style.visibility = status;
     });
 
     var target = document.querySelector("#popupBackground");
@@ -31,10 +37,10 @@ $(document).ready(function () {
         attributes: true
     });
 
-    target = document.querySelector("#resultBackground");
+    target = document.querySelector("#quiz");
     observer.observe(target, {
         attributes: true
-    });    
+    });
 
     function before(object, method, callback) {
         let originalMethod = object[method];
@@ -60,7 +66,7 @@ $(document).ready(function () {
 
     before(ubsApp, 'restartGame', () => {
         monopoly.renderPageforBoard(analytics.pages.Login);
-        return true;
+        return false;
     });
 
     after(monopoly, 'openAddPlayer', () => {
@@ -167,7 +173,7 @@ analytics.initializePages = function () {
     analytics.pages = $.extend({}, analytics.origpages);
 };
 
-analytics.logIn = function () {
+analytics.login = function () {
     let credentials = {
         username: $('#username').val(),
         password: $('#password').val()
