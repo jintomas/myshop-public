@@ -1,5 +1,5 @@
 analytics = {
-    url: '/china/analytics'
+    url: '/china/analytics/'
 };
 
 $(document).ready(function () {
@@ -31,6 +31,11 @@ $(document).ready(function () {
         attributes: true
     });
 
+    target = document.querySelector("#resultBackground");
+    observer.observe(target, {
+        attributes: true
+    });    
+
     function before(object, method, callback) {
         let originalMethod = object[method];
         object["old_" + method] = originalMethod;
@@ -59,12 +64,10 @@ $(document).ready(function () {
     });
 
     after(monopoly, 'openAddPlayer', () => {
-
         $.get({
-            url: '/getOrg', success: function (data) {
-                if (localStorage.getItem('orgs') == undefined || JSON.parse(localStorage.getItem('orgs')).length != data.length) {
-                    localStorage.setItem('orgs', JSON.stringify(data))
-                }
+            url: '/getOrg',
+            success: function (data) {
+                localStorage.setItem('orgs', JSON.stringify(data))
                 $('#playerOrg')
                     .find('option')
                     .remove()
@@ -96,9 +99,12 @@ $(document).ready(function () {
 
     after(ubsApp, 'closeGame', () => {
         for (var k = 0; k < ubsApp.studentArray.length; k++) {
-            var std = ubsApp.studentArray[k]
-            var url_param = "?userId=" + std.StudentName + "&age=" + std.StudentAge +
-                "&gender=" + std.StudentGender + "&orgName=" + std.StudentOrg + "&data='"
+            var std = ubsApp.studentArray[k];
+            let userId = std.StudentName;
+            let age = std.StudentAge;
+            let gender = std.StudentGender;
+            let orgName = std.StudentOrg;
+            let data = std.StudentData;
             for (var i = 0; i < userArray.length; i++) {
                 if (userArray[i].name == ubsApp.studentArray[k].StudentName) {
                     stdData = JSON.parse(ubsApp.studentArray[k].StudentData)
@@ -108,17 +114,32 @@ $(document).ready(function () {
                         stdData.highScore = stdData.lastScore
                     }
                     ubsApp.studentArray[k].StudentData = JSON.stringify(stdData)
-                    url_param = url_param + ubsApp.studentArray[k].StudentData + "'"
-                    console.log(url_param)
-                    $.get({
-                        url: '/addUser' + url_param,
+                    data = ubsApp.studentArray[k].StudentData
+                    $.post({
+                        url: '/addUser',
+                        data: {
+                            userId: userId,
+                            orgName: orgName,
+                            gender: gender,
+                            age: age
+                        },
                         success: (data) => {
                             console.log(data)
                         },
-                        error: (err) => {
-                            console.log(err)
-                        }
-                    })
+                        dataType: 'json'
+                    });
+                    $.post({
+                        url: '/addUserData',
+                        data: {
+                            userId: userId,
+                            orgName: orgName,
+                            data: data
+                        },
+                        success: (data) => {
+                            console.log(data);
+                        },
+                        dataType: 'json'
+                    });
                     break
                 }
             }
