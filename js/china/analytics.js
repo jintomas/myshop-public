@@ -37,11 +37,6 @@ $(document).ready(function () {
         attributes: true
     });
 
-    target = document.querySelector("#quiz");
-    observer.observe(target, {
-        attributes: true
-    });
-
     function before(object, method, callback) {
         let originalMethod = object[method];
         object["old_" + method] = originalMethod;
@@ -158,7 +153,7 @@ $(document).ready(function () {
         let eventTarget = eventObject.target;
         console.log(eventTarget.id || eventTarget.className);
         $.post({
-            url: analytics.url,
+            url: analytics.url + "/",
             success: function (response) {
                 console.log(response)
             },
