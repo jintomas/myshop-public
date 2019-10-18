@@ -11,64 +11,62 @@
 </head>
 
 <script>
-	 var ubsApp = {};
-$(document).ready(function(){
+    var ubsApp = {};
+    $(document).ready(function () {
 
-	var jsElm = document.createElement("script");
-  jsElm.type = "text/javascript";
-  jsElm.src = "js/language_translations/english.js";
-  document.head.appendChild(jsElm);
-  
-  jsElm.onload=function(){
-	ubsApp.englishTransaltion = $.extend({}, ubsApp.translation);
-	var jsElmH = document.createElement("script");
-  jsElmH.type = "text/javascript";
-  jsElmH.src = "js/language_translations/hindi.js";
-  document.head.appendChild(jsElmH);
-  
-  jsElmH.onload=function(){
-	ubsApp.hindiTransation = $.extend({}, ubsApp.translation);
-	var jsElmM = document.createElement("script");
-  jsElmM.type = "text/javascript";
-  jsElmM.src = "js/language_translations/marathi.js";
-  document.head.appendChild(jsElmM);
+        var jsElm = document.createElement("script");
+        jsElm.type = "text/javascript";
+        jsElm.src = "js/language_translations/english.js";
+        document.head.appendChild(jsElm);
 
-        jsElmH.onload = function() {
-          ubsApp.simpleChineseTranslation = $.extend({}, ubsApp.translation);
-          var jsElmM = document.createElement('script');
-          jsElmM.type = "text/javascript";
-          jsElmM.src = "js/language_translations/simple_chinese.js";
-          document.head.appendChild(jsElmM);
+        jsElm.onload = function () {
+            ubsApp.englishTransaltion = $.extend({}, ubsApp.translation);
+            var jsElmH = document.createElement("script");
+            jsElmH.type = "text/javascript";
+            jsElmH.src = "js/language_translations/hindi.js";
+            document.head.appendChild(jsElmH);
 
-  
-  jsElmM.onload=function(){
-	          ubsApp.simpleChineseTranslation = $.extend({}, ubsApp.translation);
-	
-	 $.each(ubsApp.englishTransaltion, function(key,val){
-        if(!ubsApp.hindiTransation[key]) {
-			$('#results').append(key + " not in Hindi <br>"); 
-		}
-		
-		 if(!ubsApp.marathiTranslation[key]) {
-			$('#results').append(key + " not in Marathi <br>"); 
-    }
-    
-    if (!ubsApp.simpleChineseTranslation[key]) {
-      $('#results').append(key + " not in Simple Chinese <br>")
-    }
-		
+            jsElmH.onload = function () {
+                ubsApp.hindiTransation = $.extend({}, ubsApp.translation);
+                var jsElmM = document.createElement("script");
+                jsElmM.type = "text/javascript";
+                jsElmM.src = "js/language_translations/marathi.js";
+                document.head.appendChild(jsElmM);
+
+                jsElmH.onload = function(){
+                    ubsApp.simpleChineseTransation = $.extend({}, ubsApp.translation);
+                    var jsElmM = document.createElement("script");
+                    jsElmM.type = "text/javascript";
+                    jsElmM.src = "js/language_translations/simple_chinese.js";
+                    document.head.appendChild(jsElmM);
+
+                    jsElmM.onload = function () {
+                        ubsApp.simpleChineseTransation = $.extend({}, ubsApp.translation);
+
+                        $.each(ubsApp.englishTransaltion, function (key, val) {
+                            if (!ubsApp.hindiTransation[key]) {
+                                $('#results').append(key + " not in Hindi <br>");
+                            }
+
+                            if (!ubsApp.marathiTranslation[key]) {
+                                $('#results').append(key + " not in Marathi <br>");
+                            }
+
+                            if (!ubsApp.simpleChineseTransation[key]) {
+                                $('#results').append(key + " not in Simple Chinese <br>");
+                            }
+
+                        });
+                    }
+                }
+            }
+        }
+
     });
-  }
-	}
-  }
-}
-	
-});
 
 </script>
-<body background="images/background.png" style="font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;color:black;">
-
-
+<body background="images/background.png"
+      style="font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;color:black;">
 
 
 <div id="results" class="container-fluid" style="height: 100vh;width: 100vw;">

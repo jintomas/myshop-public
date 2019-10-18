@@ -318,6 +318,7 @@ ubsApp.leaderBoardTemplate=
                                '                        <div style="display: table-cell;">{{name}}</div>'+
                                '                        <div style="display: table-cell;">{{age}}</div>'+
                                '                        <div style="display: table-cell; ">{{gender}}</div>'+
+								'						<div style="display: table-cell; ">{{org}}</div>'+
                                '                        <div style="display: table-cell; "></div>'+
                                '                        <div style="display: table-cell; "></div>'+
 
@@ -327,6 +328,7 @@ ubsApp.leaderBoardTemplate=
                                '                        <div style="display: table-cell;"><input  style="" id="playerNameInput"></input></div>'+
                                '                        <div style="display: table-cell;"><input type="number" style="" id="playerAge"></input></div>'+
                                '                        <div style="display: table-cell;"><select style="" id="playerGender"><option id="male" value="male">{{MALE}}</option><option id="female" value="female">{{FEMALE}}</option></select></div>'+
+								'						<div style="display: table-cell;"><select style="" id="playerOrg"><option id="Org1" value="UBS">UBS</option><option id="Org2" value="MS">MS</option></select></div>'+
                                '                        <div style="display: table-cell; vertical-align: middle;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%; padding-bottom: 1%; color: green;font-weight:bold;text-align: center;" onclick="ubsApp.addNewPlayer()" >{{add}}</div>'+
 
                                '                </div>'+
@@ -346,6 +348,7 @@ ubsApp.leaderBoardTemplate=
                                '                        <div style="display: table-cell;"><input  style="" id="{{StudentId}}Name" value="{{StudentName}}"></input></div>'+
                                '                        <div style="display: table-cell;"><input type="number" style="" id="{{StudentId}}Age" value="{{StudentAge}}"></input></div>'+
                                '                        <div style="display: table-cell;"><select style="" id="{{StudentId}}Gender"><option {{#if isMale}} selected="selected" {{/if}} id="male" value="male">{{MALE}}</option><option {{#if isFemale}} selected="selected" {{/if}} id="female" value="female">{{FEMALE}}</option></select></div>'+
+								'						<div style="display: table-cell;"><select style="" id="{{StudentId}}Org"><option selected="selected" value="{{StudentOrg}}">{{StudentOrg}}</option></select></div>'+
                                //'                        <div style="display: table-cell;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;padding: 1.5%; color: green;font-weight:bold; text-align: center;" onclick="ubsApp.updatePlayer(\'{{StudentId}}\')" >{{update}}</div>'+
                                //'                        <div style="display: table-cell;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;padding: 1.5%; color: green;font-weight:bold; text-align: center;" onclick="ubsApp.deletePlayer(\'{{StudentId}}\')" >{{delete}}</div>'+
                                '                        <div style="display: table-cell; text-align:center" onclick="ubsApp.updatePlayer(\'{{StudentId}}\')"  ><img style="width:25%;cursor:pointer;" src="images/update.png"></img></div>'+
@@ -751,11 +754,11 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '                </div>'+
 '                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-6 col-lg-6">{{inventoryValueTitle}}:</div>'+
-'                    <div class="col-md-6 col-lg-6" style="text-align: right;">¥ <span id="updatedInventoryValue"  style="width: 45%;    color: black;" ></span></div>'+
+'                    <div class="col-md-6 col-lg-6" style="text-align: right;">￥ <span id="updatedInventoryValue"  style="width: 45%;    color: black;" ></span></div>'+
 '                </div>'+
 '                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-6 col-lg-6">{{costTitle}}:</div>'+
-'                    <div class="col-md-6 col-lg-6" style="text-align: right;">¥ <span  id="newCostText"  style="width: 45%; color: black;" ></span></div>'+
+'                    <div class="col-md-6 col-lg-6" style="text-align: right;">￥ <span  id="newCostText"  style="width: 45%; color: black;" ></span></div>'+
 '                </div>'+
 '                <div id="parent1" class="row" style="padding: 1%;">'+
 '                    <div class="col-md-6 col-lg-6">{{payByTitle}}:</div>'+
@@ -860,26 +863,26 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                      <div style="    margin-top: 5%;    margin-bottom: 5%;">'+
 '                           <span class="payOffSubTitleLeft">'+
 '                               {{cashTitle}} '+
-'                               <span id="cashValue" >¥ {{cash}}</span>'+
+'                               <span id="cashValue" >￥ {{cash}}</span>'+
 '                           </span>'+
 '                           <span class="payOffSubTitleRight">'+
 '                               {{bankBalanceTitle}} '+
-'                               <span id="bankBalanceValue">¥ {{bankBalance}}</span>'+
+'                               <span id="bankBalanceValue">￥ {{bankBalance}}</span>'+
 '                           </span>'+
 '                      </div>'+
 '                      <div style="margin: auto;     width: fit-content;">'+
 '                      {{#if #payOff}}'+
 '                           <div style="    margin-bottom: 3%;">'+
 '                               <span class="payOffSubTitleLeft">{{debtAmountTitle}}:</span>'+
-'                                    <span class="payOffDebtAmountValue"> ¥ <span id="debtValue">{{debt}}<span>'+
+'                                    <span class="payOffDebtAmountValue"> ￥ <span id="debtValue">{{debt}}<span>'+
 '                               </span><br>'+
 '                           </div>'+
 '                      {{else}}{{/if}}'+
 '                      <span class="payOffSubTitleLeft">'+
 '                           {{#if payOff}}'+
-'                               {{amountToPayTitle}} ¥ '+
+'                               {{amountToPayTitle}} ￥ '+
 '                           {{else}}'+
-'                               {{amountToTransferTitle}} ¥ '+
+'                               {{amountToTransferTitle}} ￥ '+
 '                           {{/if}}'+
 '                      </span>'+
 '                      <span class="payOffAmountToPayValue">'+
@@ -887,7 +890,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                      </span>'+
 '                      {{#if payOff}}'+
 '                           <br><br><span class="payOffSubTitleLeft">'+
-'                               {{modeOfPaymentTitle}} ¥ '+
+'                               {{modeOfPaymentTitle}} ￥ '+
 '                           </span>'+
 '                      {{/if}}'+
 '                      {{#if payOff}}'+
@@ -989,9 +992,9 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 //'               : <br>'+
 //'           </div>'+
 //'           <div class="col-md-5">'+
-//'               <span>¥ {{balance}}</span><br>'+
-//'               <span>¥ {{cash}}</span><br>'+
-//'               <span>¥ {{debt}}</span><br>'+
+//'               <span>￥ {{balance}}</span><br>'+
+//'               <span>￥ {{cash}}</span><br>'+
+//'               <span>￥ {{debt}}</span><br>'+
 //'           </div>'+
 //'       </div>'+
 //'       <div class="row" id="rightInfo">'+
@@ -1034,11 +1037,11 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 // '                </fieldset>'+
 // '            </div>'+
 // '            <div id="insurancePayment" class="row">'+
-// '                <label for="annualPremium" class="insuranceValue">{{premium}}(¥)</label>'+
+// '                <label for="annualPremium" class="insuranceValue">{{premium}}(￥)</label>'+
 // '                <input type="number" id="annualPremium" name="premium" value="0" readonly >'+
 // '            </div>'+
 // '            <div>'+
-// '                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(¥)</label>'+
+// '                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(￥)</label>'+
 // '                <input type="number" id="sumAssured" name="sum"  value="0" readonly >'+
 // '            </div>'+
 // '            <br>'+
@@ -1120,11 +1123,11 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '                </fieldset>'+
 '            </div> <div style="display: inline-block;">'+
 '            <div id="insurancePayment" style="width: 45%;float: left;" class="row">'+
-'                <label for="annualPremium" class="insuranceValue">{{premium}}(¥)</label>'+
+'                <label for="annualPremium" class="insuranceValue">{{premium}}(￥)</label>'+
 '                <input style="width: 30%;" type="number" id="annualPremium" name="premium" value="0" readonly >'+
 '            </div>'+
 '            <div style="width: 45%;float: right;margin-top: 2%;">'+
-'                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(¥)</label>'+
+'                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(￥)</label>'+
 '                <input style="width: 30%;" type="number" id="sumAssured" name="sum"  value="0" readonly >'+
 '            </div> </div>'+
 '            <br>'+
@@ -1147,15 +1150,15 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '<img src="{{gameLogo}}" class="decisionGameLogoImage">' +
 '       <div class="row" id="leftInfo">'+
 '           <div class="col-md-10">'+
-'               <span id="decisionBankBalance" style="word-spacing: 15vmax;display:block">{{bankBalanceTitle}} ¥{{balance}}</span> <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block">{{cashTitle}} ¥{{cash}}</span>      <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ¥{{debt}}</span>       <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 15vmax;display:block">{{bankBalanceTitle}} ￥{{balance}}</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block">{{cashTitle}} ￥{{cash}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ￥{{debt}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
 '       <div class="row" id="rightInfo" style="position: relative;">'+
 '           <div class="col-md-6" >'+
 '               <span id="decisionBankBalance" style="word-spacing: 5.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ¥{{inventoryValue}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ￥{{inventoryValue}}</span>      <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 4.5vmax;display:block">{{repPoints}} {{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       <div class="decisionHelpButtons" onclick="ubsApp.startHelp(\'decisionHelp\')" style="position: absolute;right: 10%;bottom: 20%;"></div>'+
@@ -1190,17 +1193,17 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '</div>'+
 '       '+
 '<img src="{{gameLogo}}" class="decisionGameLogoImage">' +
-'       <div class="row" id="leftInfo">'+
+'       <div class="row" id="leftInfo" style="position:absolute;left:25%;">'+
 '           <div class="col-md-12" style="width:80%;">'+
-'               <span id="decisionBankBalance" style="word-spacing: 0.2vmax;display:block">{{bankBalanceTitle}} ¥{{balance}}</span> <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 8vmax;display:block">{{cashTitle}} ¥{{cash}}</span>      <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 8vmax;display:block"">{{debtTitle}} ¥{{debt}}</span>       <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 4vmax;display:block">{{bankBalanceTitle}} ￥{{balance}}</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 8vmax;display:block">{{cashTitle}} ￥{{cash}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 8vmax;display:block"">{{debtTitle}} ￥{{debt}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
-'       <div class="row" id="rightInfo" style="position: relative;">'+
+'       <div class="row" id="rightInfo" style="position: absolute;left:25%;">'+
 '           <div class="col-md-12" style="width:45%;">'+
 '               <span id="decisionBankBalance" style="word-spacing: 7.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ¥{{inventoryValue}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ￥{{inventoryValue}}</span>      <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} {{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       <div class="decisionHelpButtons" onclick="ubsApp.startHelp(\'decisionHelp\')" style="position: absolute;right: 10%;bottom: 20%;"></div>'+
