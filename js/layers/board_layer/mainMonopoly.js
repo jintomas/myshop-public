@@ -1085,7 +1085,8 @@ ubsApp.restartGame = function () {
     var audioElement = document.getElementById('splash');
     ubsApp.raiseAudioEvent(audioElement, 'splashScreenAudio');
     //setTimeout(monopoly.renderPageforBoard, 30, monopoly.pages.Splash);
-    setTimeout(monopoly.renderPageforBoard, renderTimeOutMiliSec, monopoly.pages.EnterLanguagePage);
+    // setTimeout(monopoly.renderPageforBoard, renderTimeOutMiliSec, monopoly.pages.EnterLanguagePage);
+    setTimeout(monopoly.chooseLanguage, renderTimeOutMiliSec, 'simple_chinese');
 }
 
 monopoly.initializePages = function () {
