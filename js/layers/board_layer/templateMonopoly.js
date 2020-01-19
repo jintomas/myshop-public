@@ -287,7 +287,7 @@ monopoly.endGameTemplate = '<div style="'+
                            '"> </div>'+
                            ''+
                            '<div style="'+
-                           '    background-image: url(\'images/welcomeredstrip.png\');'+
+                           '    background-image: url(\'images/welcomebluestrip.png\');'+
                            '    color: white;'+
                            '    font-weight: 700;'+
                            '    height: 10vh;'+

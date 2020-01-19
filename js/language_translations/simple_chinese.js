@@ -520,8 +520,8 @@ ubsApp.translation = {
     "NoPlayer": "不能没有玩家",
     "loadingGameMessage": "加载游戏中...",
 
-    "ReadInstructions": "查看使用说明",
-    "StartGame": "玩游戏",
+    "ReadInstructions": "帮助说明",
+    "StartGame": "开始游戏",
     "Back": "回退",
 
     "instructionHeader": "使用说明",
@@ -1465,7 +1465,7 @@ ubsApp.translation = {
     "PLAYER_ADDED_HEADER": "添加玩家",
     "PLAYER_ADDED_SUCCESSFULLY": "玩家添加成功 !",
     "PLAYER_ADDED_FAILED": "玩家添加失败！请勿添加同名玩家",
-    "ADD_PLAYER_TO_PLAY": "添加玩家玩游戏 !!!",
+    "ADD_PLAYER_TO_PLAY": "添加玩家开始游戏 !!!",
     "PLAYER_UPDATED_SUCCESSFULLY": "玩家更新成功 !",
     "PLAYER_DELETED_SUCCESSFULLY": "玩家删除成功 !",
     "continueTitle": "继续",
