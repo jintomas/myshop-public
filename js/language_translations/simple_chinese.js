@@ -1,13 +1,13 @@
 ubsApp.translation = {
     //translation for simple chinese
-    "question1": "看起来一个顾客想要购买物品:<br> 1.5kg大米<br> 2.5kg 烤囊 <br> 1 kg 西米 <br> <br>大米/ 烤囊 / 西米每公斤的成本是60 /分别是90/40元。你能说出你从客户那里拿多少钱？",
-    "question2": "看起来像同一个顾客回来了。他想要退回少量物品并购买新的东西。<br>他想要返回1kg大米 - ￥60 <br> 1公斤烤囊- ￥90 <br > <br>他想购买0.5升油<br> 6芯片包装<br> 1升油/ 1芯片包装成本为90元。你能告诉店主应该给客户多少钱吗？ ？",
-    "question3": "看起来像同一个顾客回来了。他想要退回少量物品并购买一些新物品。<br>他想要返回1kg洋葱 - ￥19 <br> 1公斤马铃薯 -  ￥34 <br > <br>他想购买1.5公斤番茄<br> 1公斤白菜<br>番茄/白菜每公斤成本是26/24元<br>你能告诉你应该支付多少钱？",
+    "question1": "看起来一个顾客想要买入物品:<br> 1.5kg大米<br> 2.5kg 烤囊 <br> 1 kg 西米 <br> <br>大米/ 烤囊 / 西米每公斤的成本是60 /分别是90/40元。你能说出你从客户那里拿多少钱？",
+    "question2": "看起来像同一个顾客回来了。他想要退回少量物品并买入新的东西。<br>他想要返回1kg大米 - ￥60 <br> 1公斤烤囊- ￥90 <br > <br>他想买入0.5升油<br> 6芯片包装<br> 1升油/ 1芯片包装成本为90元。你能告诉店主应该给客户多少钱吗？ ？",
+    "question3": "看起来像同一个顾客回来了。他想要退回少量物品并买入一些新物品。<br>他想要返回1kg洋葱 - ￥19 <br> 1公斤马铃薯 -  ￥34 <br > <br>他想买入1.5公斤番茄<br> 1公斤白菜<br>番茄/白菜每公斤成本是26/24元<br>你能告诉你应该支付多少钱？",
     "question4": "看起来像一个顾客回来了。他想要退回几件物品。<br>他想要返回1kg大米 - ￥60 <br> 1公斤烤囊  -  ￥ 90 <br> <br> <br>你能说出你会给客户多少钱吗？",
     "pratham_title_sales": "卖出",
     "pratham_title_surprise": "惊喜",
     "pratham_title_luck": "幸运",
-    "pratham_title_purchase": "购买",
+    "pratham_title_purchase": "买入",
     "pratham_title_start": "开始",
     "pratham_title_decision": "决策制定",
     "close": "关闭",
@@ -26,7 +26,7 @@ ubsApp.translation = {
     "inventoryValueTitle": "库存价值",
     "reputationTitle": "商誉",
     "language": "simple_chinese",
-    "rollIt": "掷骰子",
+    "rollIt": "滚动",
     "playerTitle": "玩家",
     "PLAYER": "玩家",
 
@@ -49,9 +49,9 @@ ubsApp.translation = {
 
     // Monopoly main board
     // board footer caption
-    "start": "下一周",
-    "purchase": "购买",
-    "sale": "出售",
+    "start": "一周前",
+    "purchase": "买入",
+    "sale": "卖出",
     "payment": "支付",
     "decision": "决策",
     "luck": "幸运",
@@ -91,12 +91,12 @@ ubsApp.translation = {
     "lessMoney": "仅支付￥<CurrentAmount>付款。请支付￥<ActualAmount>",
     "moreMoney": "正在支付￥<CurrentAmount>。请支付￥<ActualAmount>",
     "moreCash": "现金不够来完成交易. 请用银行转账支付.",
-    "bankBalance": "资金不足以完成交易。请转账或购买信用卡。",
+    "bankBalance": "资金不足以完成交易。请转账或买入信用卡。",
     "lotDebt": "你有很多债务。请用现金或银行转账支付。",
-    "pleaseConfirm": "你没有购买任何库存. 请购买或者点击取消退出.",
+    "pleaseConfirm": "你没有买入任何库存. 请买入或者点击取消退出.",
     "noDebt": "您当前没有任何负债.",
     "purchaseSuccess": "恭喜! 您的库存已经被装满! <br>现在的等级是<Percent>%. 你支付了 ￥ <Amount>. ",
-    "purchaseHeader": "购买警告",
+    "purchaseHeader": "买入警告",
     "inventoryValueTitle": "库存价值",
     "cashChequeMessage": "您的现金不足,剩余款项将通过银行转账",
     "cashChequeCreditMessage": "您的现金和银行余额不足,剩余款项将通过信贷",
@@ -168,7 +168,7 @@ ubsApp.translation = {
     "amountTitle": "数额",
     "payByTitle": "支付方式",
     "addModeTitle": "添加方式",
-    "doneTitle": "购买",
+    "doneTitle": "买入",
     "noThanksTitle": "取消",
     "or": "或者",
     "cheque": "银行转账",
@@ -211,7 +211,7 @@ ubsApp.translation = {
     "salesWrongRptpt3": "然而,此次销售代表了您一整天的销售。将￥ {{cashincreased}}计入您的现金余额。<br>您是否需要任何帮助才能知道如何解决问题？",
     "salesTimeOut": "时间到了! 您的商誉被减少4.",
 
-    "sales80DiscountMsg": "购买3块肥皂,第四块获得50％的折扣",
+    "sales80DiscountMsg": "买入3块肥皂,第四块获得50％的折扣",
     //Decision
     "invVal": "库存价值",
     "repPoints": "商誉",
@@ -222,11 +222,11 @@ ubsApp.translation = {
 
 
     "decisionQ1": "商店文件不完备",
-    "decisionQ2": "您的保险代理人已经购买了您的保单？保费为3000元 - 每年6800元。<br>您会购买吗？",
+    "decisionQ2": "您的保险代理人已经买入了您的保单？保费为3000元 - 每年6800元。<br>您会买入吗？",
     "decisionQ3": "天花板维修费用 -  10000元",
     "decisionQ4": "电费已逾期.200元 +滞纳金:100元",
     "decisionQ5": "给出的改变是错误的。减去100元。返回给客户？",
-    "decisionQ6": "购买精确的电子机器称重（1200元）或传统机器（500元）",
+    "decisionQ6": "买入精确的电子机器称重（1200元）或传统机器（500元）",
     "decisionQ7": "安全摄像头成本:500元。买？",
     "decisionQ8": "销售非品牌没有包装的货物，但有￥500的现金返还，买么? ",
     "decisionQ9": "叔叔生病在另一个城镇",
@@ -235,18 +235,18 @@ ubsApp.translation = {
     "decisionQ12": "需要维修",
     "decisionQ13": "电压波动！",
     "decisionQ14": "需要商店营销。消费1000元,增加500元 -  3000元",
-    "decisionQ15": "在没有客户信息文件的情况下出售SIM卡接受2000元的现金？",
+    "decisionQ15": "在没有客户信息文件的情况下卖出SIM卡接受2000元的现金？",
     "decisionQ16": "批发商对洗涤剂的折扣导致2500元的增加",
     "decisionQ17": "除了你的商店外,没有任何烤囊库存",
     "decisionQ17O1": "将烤囊价格提高50％并获得500元的收益（赚钱但却失去商誉）",
-    "decisionQ17O2": "以相同价格出售（获得商誉）",
+    "decisionQ17O2": "以相同价格卖出（获得商誉）",
     "decisionQ18": "你了解到在柜台销售药品可以带来更好的利润",
     "decisionQ18O1": "即使您没有执照,也开始销售处方药",
-    "decisionQ18O2": "不要出售,因为它是非法的",
+    "decisionQ18O2": "不要卖出,因为它是非法的",
     "decisionQ18O3": "秘密地只卖给熟客",
 
     "decisionQ19": "在商店关闭期间,您发现有许多未售出的三明治",
-    "decisionQ19O1": "将它们放入冰箱并明天出售。（失去商誉）",
+    "decisionQ19O1": "将它们放入冰箱并明天卖出。（失去商誉）",
     "decisionQ19O2": "扔掉它们并导致损失250元（获得商誉,但损失250元）",
     "decisionQ19O3": "将他们送到最近的慈善机构避难所。（获得商誉）",
 
@@ -255,7 +255,7 @@ ubsApp.translation = {
     "decisionQ20O2": "关闭店铺半小时并提供帮助 - 业务损失价值1000元",
     "decisionQ20O3": "店铺关闭后交付",
 
-    "decisionQ21": "以3000元的价格购买刷卡机",
+    "decisionQ21": "以3000元的价格买入刷卡机",
     "decisionQ21O1": "是（花费3000元,但获得商誉）",
     "decisionQ21O2": "否（失去商誉）",
 
@@ -263,11 +263,11 @@ ubsApp.translation = {
     "decisionQ22O1": "你把费用传递给客户 (损失商誉)",
     "decisionQ22O2": "你接受费用因为客户总是通过卡片花更多(损失￥500 但获得商誉)",
     "decisionQ23": "熟客有如果支付1000元的账单会有150元的减免",
-    "decisionQ23O1": "只向他们出售价值850元的商品",
+    "decisionQ23O1": "只向他们卖出价值850元的商品",
     "decisionQ23O2": "做笔记并要求客户在下次来的时候付款",
     "decisionQ24": "市场上牛奶短缺,但你有100包",
     "decisionQ24O1": "提高价格并增加1000元（增加1000元,但失去商誉）",
-    "decisionQ24O2": "按正常价格出售（获得商誉）",
+    "decisionQ24O2": "按正常价格卖出（获得商誉）",
     "decisionQ24O3": "卖到收支平衡,剩下的给需要的人（获得商誉）",
     "decisionQ25": "隔壁的店为冷水瓶收取额外费用1元",
     "decisionQ25O1": "建议隔壁的商店不收费,以免向当局报告",
@@ -275,7 +275,7 @@ ubsApp.translation = {
     "decisionQ25O3": "你也开始收费",
 
     "decisionQ26": "在商店关闭时未售出的三明治",
-    "decisionQ26O1": "将它们放入冰箱并在第二天出售。（失去商誉）",
+    "decisionQ26O1": "将它们放入冰箱并在第二天卖出。（失去商誉）",
     "decisionQ26O2": "扔掉它们。（损失250元,但获得商誉）",
     "decisionQ26O3": "在同一天将它们送到最近的慈善庇护所（获得商誉）",
 
@@ -285,14 +285,14 @@ ubsApp.translation = {
 
     "decisionQ28": "禽流感在地区蔓延",
     "decisionQ28O1": "丢弃所有鸡蛋（损失3500元,但获得商誉）",
-    "decisionQ28O2": "保留库存并在不通知客户的情况下出售（从鸡蛋中赚取利润,但损失商誉）",
+    "decisionQ28O2": "保留库存并在不通知客户的情况下卖出（从鸡蛋中赚取利润,但损失商誉）",
 
     "decisionQ29": "除了你的商店外,没有任何烤囊库存",
     "decisionQ29O1": "将烤囊价格提高50％,赚取1000元（损失商誉）",
-    "decisionQ29O2": "以相同价格出售（获得商誉）",
+    "decisionQ29O2": "以相同价格卖出（获得商誉）",
 
     "decisionQ30": "节日就要来了. 采购额外的价值￥5000的食品货物并且希望能赚取额外的收益在10%和50%之间",
-    "decisionQ30O1": "购买额外的货物",
+    "decisionQ30O1": "买入额外的货物",
     "decisionQ30O2": "什么都不做，继续跟往常一样",
 
     "decisionQ31": "良好的销售额。额外的银行资金",
@@ -307,11 +307,11 @@ ubsApp.translation = {
 
     "decisionQ33": "客户没有钱就到店里",
     "decisionQ33O1": "引入月度帐簿（保留客户但可能遗漏物品,造成轻微损失）",
-    "decisionQ33O2": "让熟客以信用方式购买（忘记收钱的风险）",
+    "decisionQ33O2": "让熟客以信用方式买入（忘记收钱的风险）",
     "decisionQ33O3": "只卖给那些有现金的人（有失去顾客的风险）",
 
     "decisionQ34": "电力短缺",
-    "decisionQ34O1": "购买逆变器。成本为5000元",
+    "decisionQ34O1": "买入逆变器。成本为5000元",
     "decisionQ34O2": "夜间使用蜡烛",
 
     "decisionQ1O1": "贿赂监察员￥ 1000? (损失商誉和￥1000)",
@@ -337,17 +337,17 @@ ubsApp.translation = {
     "decisionQ9O1": "关闭店铺,照顾他,但冒着失去业务的风险,价值7000元（获得商誉）",
     "decisionQ9O2": "不要去（失去商誉,但获得7000元）",
 
-    "decisionQ10O1": "以折扣价出售并赚取500元的利润（赚取500元,但却失去了声誉点）",
+    "decisionQ10O1": "以折扣价卖出并赚取500元的利润（赚取500元,但却失去了声誉点）",
     "decisionQ10O2": "不卖（获得商誉）",
 
     "decisionQ11O1": "贿赂100元（失去商誉和100元）",
     "decisionQ11O2": "支付500元（减去500元但获得商誉）",
 
-    "decisionQ12O1": "以750元购买1项服务（余额减少750元,但失去商誉）",
-    "decisionQ12O2": "购买3项服务并获得一项免费服务（余额减少2250元,但获得声誉点数",
+    "decisionQ12O1": "以750元买入1项服务（余额减少750元,但失去商誉）",
+    "decisionQ12O2": "买入3项服务并获得一项免费服务（余额减少2250元,但获得声誉点数",
 
-    "decisionQ13O1": "购买3000元的稳定器并节省价值700元的库存损失（花钱但获得商誉）",
-    "decisionQ13O2": "不要购买（丢失价值700元的商品并失去声誉点数）",
+    "decisionQ13O1": "买入3000元的稳定器并节省价值700元的库存损失（花钱但获得商誉）",
+    "decisionQ13O2": "不要买入（丢失价值700元的商品并失去声誉点数）",
 
     "decisionQ14O1": "花费（计算出的风险可以赚到一些钱而你获得商誉）",
     "decisionQ14O2": "不花钱（没有影响）",
@@ -365,7 +365,7 @@ ubsApp.translation = {
     "insurance3": "自然灾害",
     "premium": "年保险费",
     "sumAssured": "投保金额",
-    "buy": "购买",
+    "buy": "买入",
     "cancel": "取消",
     "cashTitleName": "现金",
     "Cash": "现金",
@@ -387,7 +387,7 @@ ubsApp.translation = {
     //luck scenario
     "luckQuestion1": "刮刮卡现金奖 : ￥500",
     "luckQuestion2": "刮刮卡现金奖: ￥100",
-    "luckQuestion3": "在夏天多余的冰激淋出售. 利润: ￥ 2500 ",
+    "luckQuestion3": "在夏天多余的冰激淋卖出. 利润: ￥ 2500 ",
     "luckQuestion4": "断电. 牛奶变质了. 损失库存价值 ￥ 1800. ",
     "luckQuestion5": "小偷进了商店! 损失库存价值 ￥ 700",
     "luckQuestion6": "小偷进了商店! 损失库存价值 ￥ 3800.",
@@ -418,7 +418,7 @@ ubsApp.translation = {
     "luckQuestion31": "遭到纵火. 损失库存价值 ￥12000",
     "luckQuestion32": "全卖家折扣。销售额: ￥ 7000",
     "luckQuestion33": "投资者礼品. ￥ 10000",
-    "luckQuestion34": "违规出售生鲜食品罚款。支付 ￥ 500",
+    "luckQuestion34": "违规卖出生鲜食品罚款。支付 ￥ 500",
     "luckQuestion35": "很棒的客户服务！你得到20个商誉。",
     "luckQuestion36": "生意越来越好!  赚了 ￥2000",
     "luckQuestion37": "家庭配送服务开始了! 你得到了 15 个商誉.",
@@ -507,7 +507,7 @@ ubsApp.translation = {
     "paymentQuestion14": "为了增加节日季节的销售,你必须在商店安装一个额外的摊位。 ￥2500",
     "paymentQuestion15": "商店的卷帘门生锈,需要更换。￥1200",
     "paymentQuestion16": "商店的送货车坏了,需要维修。 ￥ 2200",
-    "paymentQuestion17": "由于最近的政府监管,你需要购买大量的非塑料手提袋。 ￥10000",
+    "paymentQuestion17": "由于最近的政府监管,你需要买入大量的非塑料手提袋。 ￥10000",
     "paymentQuestion18": "展示柜意外破损,需要修理。 ￥1300",
     "paymentQuestion19": "最近的降雨造成店铺屋顶受损。需要修理。费用 ￥750",
     "paymentQuestion20": "安装闭路电视摄像机。费用 ￥5000.",
@@ -530,7 +530,7 @@ ubsApp.translation = {
         "这场比赛将在骰子的帮助下进行。" +
         "骰子会给你一个1到6之间的随机数,然后相应的光标将移动到排行榜。" +
         "这是一场垄断游戏。" +
-        "有许多模板,如销售/购买/运气/库存,有许多基于模板的方案。" +
+        "有许多模板,如销售/买入/运气/库存,有许多基于模板的方案。" +
         "在开始游戏之前仔细阅读每个模板和场景。" +
         "随着你的进步,你将得到/丢失点数或奖励,或者奖励给你的回答基于你的决定",
     "INVENTORYVALUE": "库存值",
@@ -646,8 +646,8 @@ ubsApp.translation = {
     "QuizQuestion105": "投资机会意味着",
     "QuizQuestion106": "股票以100元买入。现在的卖价是110元。投资者将获利",
     "QuizQuestion107": "哪种投资类型风险最小？",
-    "QuizQuestion108": "购买汽油/柴油车不是投资,因为",
-    "QuizQuestion109": "你去年以10000元的价格购买了黄金,并在今年以11500元的价格出售",
+    "QuizQuestion108": "买入汽油/柴油车不是投资,因为",
+    "QuizQuestion109": "你去年以10000元的价格买入了黄金,并在今年以11500元的价格卖出",
     "QuizQuestion110": "哪种类型的公司在证券市场上占有一席之地？",
     "QuizQuestion111": "这些是哪种金融投资类型？",
     "QuizQuestion112": "投资风险意味着",
@@ -671,8 +671,8 @@ ubsApp.translation = {
     "QuizQuestion130": "关于在活期账户的利率和交易，哪一个是正确的？",
     "QuizQuestion131": "什么用于向银行账户添加资金？",
     "QuizQuestion132": "在银行账户中,谁可以发起银行转账？",
-    "QuizQuestion133": "您使用什么卡来使用您帐户中已有的资金购买商品？",
-    "QuizQuestion134": "在使用你的银行给你的信贷资金购买商品时，要使用什么卡？",
+    "QuizQuestion133": "您使用什么卡来使用您帐户中已有的资金买入商品？",
+    "QuizQuestion134": "在使用你的银行给你的信贷资金买入商品时，要使用什么卡？",
     "QuizQuestion135": "ICBC是什么银行的缩写？",
     "QuizQuestion136": "当有人将钱存入银行账户时,这称为",
     "QuizQuestion137": "当有人从银行账户中取钱时,这称为",
@@ -1028,7 +1028,7 @@ ubsApp.translation = {
     "QuizQuestion88Option2": "网上银行",
     "QuizQuestion88Option3": "柜员银行",
     "QuizQuestion88Option4": "以上所有",
-    "QuizQuestion89Option1": "购买车辆的贷款",
+    "QuizQuestion89Option1": "买入车辆的贷款",
     "QuizQuestion89Option2": "购房贷款",
     "QuizQuestion89Option3": "自动贷款",
     "QuizQuestion89Option4": "以上都不是",
@@ -1079,7 +1079,7 @@ ubsApp.translation = {
     "QuizQuestion103Option3": "试点单位机构内有效",
     "QuizQuestion103Option4": "无处可用",
     "QuizQuestion104Option1": "公募基金",
-    "QuizQuestion104Option2": "股票份额购买",
+    "QuizQuestion104Option2": "股票份额买入",
     "QuizQuestion104Option3": "黄金",
     "QuizQuestion104Option4": "假期旅行",
     "QuizQuestion105Option1": "赚钱的机会",
@@ -1087,7 +1087,7 @@ ubsApp.translation = {
     "QuizQuestion105Option3": "发生交通事故的机会",
     "QuizQuestion105Option4": "身体健康的机会",
     "QuizQuestion106Option1": "卖股票",
-    "QuizQuestion106Option2": "购买更多股票",
+    "QuizQuestion106Option2": "买入更多股票",
     "QuizQuestion106Option3": "不卖股票",
     "QuizQuestion106Option4": "不买更多股票",
     "QuizQuestion107Option1": "政府债券",
@@ -1096,7 +1096,7 @@ ubsApp.translation = {
     "QuizQuestion107Option4": "定期存款",
     "QuizQuestion108Option1": "运行它需要钱",
     "QuizQuestion108Option2": "它消耗化石燃料",
-    "QuizQuestion108Option3": "购买后其价值降低",
+    "QuizQuestion108Option3": "买入后其价值降低",
     "QuizQuestion108Option4": "它污染了大气层",
     "QuizQuestion109Option1": "你的利润为11500元",
     "QuizQuestion109Option2": "你赚了1500元",
@@ -1321,7 +1321,7 @@ ubsApp.translation = {
     "theGameBegins": "游戏开始!!!",
     "hasHighestScoreMessage": "玩家 {{playerName}} 获得了最高分但还是比通常的利润要少.",
     "kycHelpImage": "images/incometaxhelp.png",
-    "salesNoItemMessage": "库存太低导致没有足够数量货物出售",
+    "salesNoItemMessage": "库存太低导致没有足够数量货物卖出",
     "advantageCardConvertSuccess": "恭喜您现在拥有 {{advantageCard}}  高级卡片　{{reputationPoints}} 商誉已被使用.",
     "decisionBankBalanceTitle": "银行余额",
 
