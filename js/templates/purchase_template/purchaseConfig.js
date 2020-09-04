@@ -26,7 +26,8 @@ ubsApp.purchaseConfig={
 				"creditTitle":"{{creditTitle}}",
 				"noThanksTitle":"{{noThanksTitle}}",
 				"playerTitle":"{{playerTitle}}",
-				"purchaseHelp":"{{purchaseHelp}}"
+				"purchaseHelp":"{{purchaseHelp}}",
+				"help":"{{help}}",
 			}
 		]
 	},

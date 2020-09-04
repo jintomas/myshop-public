@@ -1,6 +1,6 @@
 .instructionButtons{
   background:url('../images/button long.png');
-  color: navy;
+  color: green;
   font-weight: bold;
   cursor: pointer;
   border: none;
@@ -10,7 +10,7 @@
   padding-bottom: 16%;
   font-size: large;
   text-align: center;
-  font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
+  font-family: 'Microsoft YaHei', 'STHeiti', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
 }
   
 .startButtons{
@@ -23,7 +23,7 @@
   font-size: large;
   padding: 13px;
   padding-bottom: 17%;
-  font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
+  font-family: 'Microsoft YaHei', 'STHeiti', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
 }
 
 .redStrip{
@@ -37,7 +37,7 @@
    position: relative;
    text-align: center;
    margin-top: 3vh;
-   font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
+   font-family: 'Microsoft YaHei',  'STHeiti', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
   
 }
 
@@ -51,11 +51,6 @@
     color: white;
     font-weight: bold;
    
-    font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 4vmax;
+    font-family:'Microsoft YaHei',  'STHeiti', Arial, sans-serif;     font-weight: bold;     font-size: 4vmax;
 }
-
-  
-  
-}
-
 

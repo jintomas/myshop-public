@@ -57,6 +57,12 @@ background-color:#FF9933;
 border-bottom:black 2px solid;
 border-top:2px #FF9933 solid;
 }
+.button.green
+{
+	color:black;
+	background-color:rgb(0, 181, 181);
+	border-bottom:black 2px solid;
+}
 .gray:active
 {
 border-top:black 2px solid;

@@ -65,7 +65,7 @@ monopoly.origpages = {
         {
             "templateId": 2,
             "templateType": "static",
-            "src": "<img src=\"images/shopkeeper/shopkeeper.png\" style=\"position:absolute; top:20%; width: 20%; height: 40%;\"></img>",
+            "src": "<img src=\"images/shopkeeper/shopkeeper.png\" style=\"position:absolute; top:20%; width: 15%; height: 50%; left: 10%;\"></img>",
             /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
         }
 
@@ -75,7 +75,7 @@ monopoly.origpages = {
     "InitialisePlayers": [{
         "templateId": 1,
         "templateType": "static",
-        "style": "padding:8px;text-align:center; color:white;border-radius:5px;width:100%;left:0%;height:11vh;background-image: url(images/blue_strip.png);    background-size: 100% 100%;font-size: 3vmax;",
+        "style": "padding:8px;text-align:center; color:white;border-radius:5px;width:100%;left:0%;height:11vh;background-image: url(images/blue_strip.png);    background-size: auto;font-size: 3vmax;",
         "id": "initPageTitle",
         "src": "{{initPageTitle}}",
     },
@@ -135,7 +135,7 @@ monopoly.origpages = {
         {
             "templateId": 2,
             "templateType": "static",
-            "src": "<img src=\"images/shopkeeper/shopkeeper_side.png\" style=\"position:absolute; top:20%; width: 12%; height: 40%;\"></img>",
+            "src": "<img src=\"images/shopkeeper/shopkeeper_side.png\" style=\"position:absolute; top:20%; width: 12%; height: 50%;\"></img>",
             /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
         }
     ],
@@ -192,7 +192,7 @@ monopoly.origpages = {
         {
             "templateId": 2,
             "templateType": "static",
-            "src": "<img src=\"images/shopkeeper/shopkeeper_side.png\" style=\"position:absolute; top:20%; width: 12%; height: 40%;\"></img>",
+            "src": "<img src=\"images/shopkeeper/shopkeeper_side.png\" style=\"position:absolute; top:20%; width: 12%; height: 50%;\"></img>",
             /* "style": "position: absolute;padding:10px;border-radius:5px;top:20%; " */
         }
     ],

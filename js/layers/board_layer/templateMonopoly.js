@@ -117,7 +117,7 @@ monopoly.sideScoreBoardTemplate=
 '<div class="sideScoreBoardContainer">'+
 '        <div class="sideScoreBoardRow">'+
 '            <div class="sideScoreBoardCol"></div>'+
-'            <div class="sideScoreBoardCol"><img src="images/red header.png" style="width: 100%;"></div>                <div class="sideScoreBoardCol"></div>'+
+'            <div class="sideScoreBoardCol"><!--img src="images/red header.png" style="width: 100%;"--></div>                <div class="sideScoreBoardCol"></div>'+
 '        </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol weekTitle">{{weekTitle}}: <span id="weekContent">100</span></div>'+
@@ -173,8 +173,8 @@ monopoly.sideScoreBoardTemplate=
 '</div>'+
 '  <div class="sideScoreBoardRow">'+
 '       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()" style="padding-left: 7%;padding-right: 7%;padding-bottom: 4%;">{{quizTitle}}</button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'instructionHelp\')"></button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()"></button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'instructionHelp\')">{{help}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()">{{endGame}}</button>'+
 '  </div>'+
 '</div>';
 
@@ -341,8 +341,8 @@ monopoly.endGameTemplate = '<div style="'+
                            ''+
                            '</div>'+
                            ''+
-                           '   <div style="display:flex;justify-content:space-around;flex-direction:row;"> <div style="margin-top: 10px;margin-bottom: 10px;"> <div style="cursor:pointer;background-image: url(images/buttonMedium.png);background-size: 100% 100%; width: fit-content;margin: auto;   padding: 7px;    color: green;" onClick="ubsApp.restartGame();"> {{PLAYAGAIN}} </div></div>'+
-                           ' <div style="margin-top: 10px;margin-bottom: 10px;"> <div style="cursor:pointer;background-image: url(images/buttonMedium.png);background-size: 100% 100%; width: fit-content;margin: auto;   padding: 7px;    color: red;" onClick="ubsApp.closeGame();"> {{CLOSE}} </div></div>'+
+                           '   <div style="display:flex;justify-content:space-around;flex-direction:row;"> <div style="margin-top: 10px;margin-bottom: 10px;"> <div style="cursor:pointer;background-image: url(images/buttonAction.png);background-size: 100% 100%; width: fit-content;margin: auto;   padding: 7px;    color: white;" onClick="ubsApp.restartGame();"> {{PLAYAGAIN}} </div></div>'+
+                           ' <div style="margin-top: 10px;margin-bottom: 10px;"> <div style="cursor:pointer;background-image: url(images/buttonCancel.png);background-size: 100% 100%; width: fit-content;margin: auto;   padding: 7px;    color: white;" onClick="ubsApp.closeGame();"> {{CLOSE}} </div></div>'+
                            '</div>'+
                            '</div>';
 

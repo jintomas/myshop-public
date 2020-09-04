@@ -26,7 +26,7 @@ ubsApp.translation = {
     "inventoryValueTitle": "库存价值",
     "reputationTitle": "商誉",
     "language": "simple_chinese",
-    "rollIt": "滚动",
+    "rollIt": "掷骰子",
     "playerTitle": "玩家",
     "PLAYER": "玩家",
 
@@ -470,6 +470,8 @@ ubsApp.translation = {
 
     "convertTitle": "转换",
     "quizTitle": "测验",
+    "endGame": "退出",
+    "help": "帮助",
 
 
     // Advantage Card
