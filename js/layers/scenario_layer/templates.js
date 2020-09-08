@@ -543,7 +543,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '<img src="{{gameLogo}}" class="quizGameLogoImage">' +
 '<div id="quizOkButtons" style="display:flex;width:100%;margin-left:68%">'+
 '   <button id="quizDone" style="color:green" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">{{doneTitle}}</button>'+
-'   <button id="quizCancel" style="color:white" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">{{cancelTitle}}</button>'+
+'   <button id="quizCancel" style="color:white; background: url(../images/buttonCancel.png);" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">{{cancelTitle}}</button>'+
 '   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>'+
 '</div>';
@@ -808,7 +808,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '            <!--img src="images/red header.png" style="width:100%; height:100%"-->'+
 '       </div>' +
 
-'       <div id="scenario" style="background-color:white; color:black;">'+
+'       <div id="scenario" style="background-color:transparent; color:black;">'+
 '           {{scenario}}<br>'+
 '       </div>'+
 '       <div id="result"></div>'+

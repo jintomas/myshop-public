@@ -64,8 +64,9 @@ body {
     min-height:40vh;
     background-image: url(../images/border_orange.png);
     background-size: 100% 100%;
+    background-color: white;
     right:30%;
-    padding: 2% 3%;
+    padding: 2% 5%;
     margin: auto;
     margin-top: 10%;
     max-height: 80vmax;

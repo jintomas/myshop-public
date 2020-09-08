@@ -121,14 +121,14 @@
 }
 
 .quizOkButton {
-	background:url('../images/buttonsmall.png');
+	background:url('../images/buttonAction.png');
 	margin-left: 45%;
 	background-size: 100% 100%;
 }
 
 .quizSubmitButtons {
     margin-right: 5px;
-	background:url('../images/buttonsmall.png');
+	background:url('../images/buttonAction.png');
 	float: right;
 	background-size: 100% 100%;
 }
@@ -136,7 +136,7 @@
 .quizHelpButtons {
 	float: right;
 	margin-left: 5%;
-	background-image: url('../images/buttonHelp.png');
+	background-image: url('../images/buttonHelpQ.png');
 	background-color: transparent;
 	height: auto;
 	background-size: 100% 100%;
