@@ -904,7 +904,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                           <button style="color:white;" class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
 '                      </div>'+
 '                      <div style="width:24%;margin-left: 2%;" >'+
-'                           <button style="color:white;" class="payOffButton"  onclick="ubsApp.closeCurrentScenario(); {{#if openNextMove}} ubsApp.nextMove(); {{/if}}" >{{cancelTitle}}</button>'+
+'                           <button style="color:white; background-image: url(../images/buttonCancel.png);" class="payOffButton"  onclick="ubsApp.closeCurrentScenario(); {{#if openNextMove}} ubsApp.nextMove(); {{/if}}" >{{cancelTitle}}</button>'+
 '                      </div>' +
 '</div>'+
 '       <div id="result"></div>'+
