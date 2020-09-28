@@ -35,7 +35,7 @@ monopoly.origpages = {
             "templateId": 2,
             "templateType": "static",
 
-            "src": "<div id=\"redstrip\" class=\"redStrip\"> <img src=\"images/blue_strip.png\" style=\"width: 100%; height: 100%\"></img> <div class=\"centered\">{{welcome}}</div></div>"
+            "src": "<div id=\"redstrip\" class=\"redStrip\"><div class=\"centered\">{{welcome}}</div></div>"
         },
 
         {
@@ -60,7 +60,7 @@ monopoly.origpages = {
             "templateId": 2,
             "templateType": "static",
             "style": " width:100%;display: flex;flex-direction: row;justify-content: space-around; ",
-            "src": "<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);\" style=\"position:absolute;padding:10px; border-radius:5px;border: none;top:82%;right:45%;padding:10px; background-image: url(images/backbutton.png);background-size: 100% 100%;background-color:transparent; padding: 2% 4%;    color: red;\" > </button>",
+            "src": "<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.EnterLanguagePage);\" style=\"position:absolute;padding:10px; border-radius:5px;border: none;top:82%;right:45%;padding:10px; background-image: url(images/backbutton.png);background-size: 100% 100%;background-color:transparent; padding: 2% 4%;    color: rgb(179, 62, 58);\" > </button>",
         },
         {
             "templateId": 2,
@@ -75,7 +75,7 @@ monopoly.origpages = {
     "InitialisePlayers": [{
         "templateId": 1,
         "templateType": "static",
-        "style": "padding:8px;text-align:center; color:white;border-radius:5px;width:100%;left:0%;height:11vh;background-image: url(images/blue_strip.png);    background-size: auto;font-size: 3vmax;",
+        "style": "padding:8px;text-align:center; color:white;border-radius:5px;width:100%;left:0%;height:11vh;background-image: url(images/blue_strip.png);    background-size: auto;font-size: 2vmax;",
         "id": "initPageTitle",
         "src": "{{initPageTitle}}",
     },
@@ -124,7 +124,7 @@ monopoly.origpages = {
             "templateId": 1,
             "templateType": "static",
             "style": " width:90%;display: flex;flex-direction: row;justify-content: space-around;float:right; ",
-            "src": "<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"border-radius:5px;border:0;    background-image: url(images/backbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;    color: red;\" > </button> <button onclick=\"monopoly.openAddPlayer();\" style=\" background: url('images/button long.png'); padding: 14px;    background-size: 100% 100%;    background-color: transparent;    border: none;    cursor: pointer;   color: red;\" > {{ADD_PLAYER}}</button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;    background-image: url(images/nextbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;;    color: green;\" id=\"storePlayerDetailsButton\"> </button>",
+            "src": "<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"border-radius:5px;border:0;    background-image: url(images/backbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;    color: rgb(179, 62, 58);\" > </button> <button onclick=\"monopoly.openAddPlayer();\" style=\" background: url('images/button long.png'); padding: 14px;    background-size: 100% 100%;    background-color: transparent;    border: none;    cursor: pointer;   color: green;\" > {{ADD_PLAYER}}</button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;    background-image: url(images/nextbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;;    color: green;\" id=\"storePlayerDetailsButton\"> </button>",
         },
         /*{
             "templateId":1,
@@ -181,7 +181,7 @@ monopoly.origpages = {
             "templateId": 1,
             "templateType": "static",
             "style": " width:100%;display: flex;flex-direction: row;justify-content: space-around; ",
-            "src": "<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"border-radius:5px;border:0;    background-image: url(images/backbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;    color: red;\" > </button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;    background-image: url(images/nextbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;;    color: green;\" id=\"storePlayerDetailsButton\"> </button>",
+            "src": "<button onclick=\"monopoly.renderPageforBoard(monopoly.pages.WelcomePage);\" style=\"border-radius:5px;border:0;    background-image: url(images/backbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;    color: rgb(179, 62, 58);\" > </button> <button onclick=\"monopoly.storePlayerDetails()\" style=\"border-radius:5px;border:0;    background-image: url(images/nextbutton.png);background-size: 100% 100%;background-color: transparent;padding: 2% 4%;;    color: green;\" id=\"storePlayerDetailsButton\"> </button>",
         },
         /*{
             "templateId":1,

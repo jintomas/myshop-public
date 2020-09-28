@@ -329,7 +329,7 @@ monopoly.storePlayerDetails = function () {
             ubsApp.openPopup({
                 "message": ubsApp.getTranslation("NoPlayer"),
                 "header": ubsApp.getTranslation("ERROR"),
-                "headerStyle": "text-align: center;  color: red; font-weight: 700;",
+                "headerStyle": "text-align: center;  color: rgb(179, 62, 58); font-weight: 700;",
             });
             return;
         } else {
@@ -347,7 +347,7 @@ monopoly.storePlayerDetails = function () {
             ubsApp.openPopup({
                 "message": ubsApp.getTranslation("eachPlayerNameUniqueMessage"),
                 "header": ubsApp.getTranslation("ERROR"),
-                "headerStyle": "text-align: center;  color: red; font-weight: 700;",
+                "headerStyle": "text-align: center;  color: rgb(179, 62, 58); font-weight: 700;",
             });
             return;
         }
@@ -409,8 +409,8 @@ monopoly.storePlayerDetails = function () {
     ubsApp.openPopup({
         "header": "",
         "message": ubsApp.getTranslation("theGameBegins"),
-        "messageStyle": "text-align: center;   color: red; font-size:2.5vmax;  padding-top: 19px;",
-        "headerStyle": "text-align: center;  color: red; font-weight: 700;",
+        "messageStyle": "text-align: center;   color: rgb(179, 62, 58); font-size:2.5vmax;  padding-top: 19px;",
+        "headerStyle": "text-align: center;  color: rgb(179, 62, 58); font-weight: 700;",
         "showCloseButton": false,
         "showBorder": false,
         "backgroundColor": "white",
@@ -632,7 +632,7 @@ monopoly.chooseLanguage = function (language) {
             ubsApp.openPopup({
                 "message": "Please select the language",
                 "header": "ERROR",
-                "headerStyle": "text-align: center;  color: red; font-weight: 700;",
+                "headerStyle": "text-align: center;  color: rgb(179, 62, 58); font-weight: 700;",
                 "showCloseButton": true,
             });
 
@@ -662,7 +662,7 @@ monopoly.readInstruction = function () {
 
     /*	  ubsApp.openPopup({ "message" : ubsApp.getTranslation("instructionsMessage"),
               "header" : ubsApp.getTranslation("instructionHeader"),
-              "headerStyle" : "text-align: center;  color: red;"
+              "headerStyle" : "text-align: center;  color: rgb(179, 62, 58);"
                    });*/
     ubsApp.startHelp("instructionHelp");
 }
@@ -751,7 +751,7 @@ ubsApp.confirmEndGame = function () {
     ubsApp.openPopup({
         'message': ubsApp.getTranslation("endGameConfirm"),
         "header": ubsApp.getTranslation("ENDGAME"),
-        "headerStyle": "text-align: center;  color: red; font-weight: bold;",
+        "headerStyle": "text-align: center;  color: rgb(179, 62, 58); font-weight: bold;",
         'buttons': [
             {
                 'name': ubsApp.getTranslation("yes"),
@@ -760,7 +760,8 @@ ubsApp.confirmEndGame = function () {
 
             {
                 'name': ubsApp.getTranslation("no"),
-                'action': "ubsApp.closePopup();"
+                'action': "ubsApp.closePopup();",
+                'isCancel': true 
             }
         ]
     });
@@ -856,7 +857,7 @@ ubsApp.endGame = function () {
     ubsApp.openPopup({
         "header": winnerName,
         "message": "",
-        "headerStyle": "text-align: center;  color: red; font-weight: 700;",
+        "headerStyle": "text-align: center;  color: rgb(179, 62, 58); font-weight: 700;",
         "imageUrl": ubsApp.getTranslation("congratulationImage"),
     });
 }
@@ -889,7 +890,7 @@ ubsApp.nextMove = function () {
             ubsApp.openPopup({
                 "header": "",
                 "message": "",
-                "headerStyle": "text-align: center;  color: red; font-weight: 700;",
+                "headerStyle": "text-align: center;  color: rgb(179, 62, 58); font-weight: 700;",
                 "imageUrl": ubsApp.getTranslation("nextPlayerImage"),
                 "imageStyle": "width:100%;",
                 "showCloseButton": false,
@@ -1062,7 +1063,7 @@ ubsApp.openQuizIfValid = function () {
         ubsApp.openPopup({
             "message": ubsApp.getTranslation("quizLimitReachedForWeek"),
             "header": ubsApp.getTranslation("ERROR"),
-            "headerStyle": "text-align: center;  color: red; font-weight: 700; ",
+            "headerStyle": "text-align: center;  color: rgb(179, 62, 58); font-weight: 700; ",
         });
     }
 

@@ -94,7 +94,7 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 		  		ubsApp.openPopup({
 	        		"message" : quizResultMessage,
 	        		"header"  : ubsApp.translation["quizWrongAnswerHeading"],
-	        		"headerStyle" : "text-align: center;  color: red; font-weight: 700; ",
+	        		"headerStyle" : "text-align: center;  color: rgb(179, 62, 58); font-weight: 700; ",
 	        		"buttons":[
 	                		{
 	                			'id':"unluckyScenarioOkButton",
@@ -110,7 +110,7 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 			  	ubsApp.openPopup({
 	        		"message" : quizResultMessage,
 	        		"header"  : ubsApp.translation["quizWrongAnswerHeading"],
-	        		"headerStyle" : "text-align: center;  color: red; font-weight: 700; ",
+	        		"headerStyle" : "text-align: center;  color: rgb(179, 62, 58); font-weight: 700; ",
 	        		"buttons":[
 	                		{
 	                			'id':"quizWrongAnswer",

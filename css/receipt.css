@@ -46,7 +46,7 @@
     border:0;
     width:90%;
     margin-left:8%;
-    background-color:red;
+    background-color: rgb(179, 62, 58);
     color:#123503;
     background-image:url('../images/buttonlong.png');
 }
@@ -252,7 +252,7 @@ tr.strikeout td:before {
 
 .salesScreenTitle{
     position:absolute;
-    top:4%;
+    top:5%;
     left:8%;
     padding:10px;
     font-weight:600;
@@ -266,7 +266,7 @@ tr.strikeout td:before {
 
 .salesIconContainer{
     width:7%;
-    height:10%;
+    height:15%;
     top:3%;
     left:1%;
     position: absolute;
@@ -277,5 +277,5 @@ tr.strikeout td:before {
     top: 70%;
     left: 8px;
     width: 90%;
-    height: 15%;
+    height: 20%;
 }

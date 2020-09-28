@@ -58,12 +58,13 @@
     background-image: url(../images/buttonAction.png);
     background-size: 100% 100%;
     text-align: center;
-    padding: 2%;
+    padding: 3%;
     padding-bottom: 4%;
     font-weight: bold;
     border: none;
     background-color: transparent;
     color: white;
+    width: 50%;
 }
 
 .sideScoreBoardButton:active{
@@ -86,6 +87,7 @@
   border: none;
   background-color: transparent;
   color: white;
+  width: 30%;
 }
 
 .sideScoreBoardHelpButton:active{

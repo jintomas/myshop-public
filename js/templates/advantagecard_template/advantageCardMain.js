@@ -61,7 +61,7 @@ ubsApp.covertReputationToWildCard=function(){
         ubsApp.openPopup({
             'message' : ubsApp.translation["validReputationPts"],
             "header" : ubsApp.getTranslation("ERROR"),
-            "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+            "headerStyle" : "text-align: center;  color: rgb(179, 62, 58); font-weight: 700;",
         });
         }
 

@@ -6,7 +6,7 @@ ubsApp.translation = {
     "question4": "看起来像一个顾客回来了。他想要退回几件物品。<br>他想要返回1kg大米 - ￥60 <br> 1公斤烤囊  -  ￥ 90 <br> <br> <br>你能说出你会给客户多少钱吗？",
     "pratham_title_sales": "卖出",
     "pratham_title_surprise": "惊喜",
-    "pratham_title_luck": "幸运",
+    "pratham_title_luck": "运气",
     "pratham_title_purchase": "买入",
     "pratham_title_start": "开始",
     "pratham_title_decision": "决策制定",
@@ -54,7 +54,7 @@ ubsApp.translation = {
     "sale": "卖出",
     "payment": "支付",
     "decision": "决策",
-    "luck": "幸运",
+    "luck": "运气",
 
 
     "bankBalanceTitle": "银行余额",
@@ -150,7 +150,7 @@ ubsApp.translation = {
     "transferToBankTitle": "存款现金到银行",
     "debtAmountTitle": "债务数额",
     "cancelTitle": "取消",
-    "withdrawTitle": "取现金",
+    "withdrawTitle": "提款",
 
     //purchase
     "amountToPayTitle": "支付数额",
@@ -159,7 +159,7 @@ ubsApp.translation = {
     "helpTitle": "帮助",
     "gainTitle": "收获",
     "takeQuizTitle": "接受测验",
-    "checkWildCard": "使用高级卡片",
+    "checkWildCard": "使用优惠卡",
     "current": "当前",
     "level": "等级",
     "confirmTitle": "确认",
@@ -475,10 +475,10 @@ ubsApp.translation = {
 
 
     // Advantage Card
-    "advantageCardTitle": "高级卡片",
+    "advantageCardTitle": "优惠卡",
     "reputationPointAvailableTitle": "可用商誉",
     "numberToConvertTitle": "转换数量",
-    "numberOfAdvantageCardTitle": "高级卡片数量",
+    "numberOfAdvantageCardTitle": "优惠卡数量",
     "reputationPointBalance": "商誉余额",
     "conversionTitle": "15 点 = 1 卡片",
     "checkTitle": "检查",
@@ -1047,7 +1047,7 @@ ubsApp.translation = {
     "QuizQuestion94Option1": "是",
     "QuizQuestion94Option2": "否",
     "QuizQuestion95Option1": "刷卡支付",
-    "QuizQuestion95Option2": "从ATM机取现金",
+    "QuizQuestion95Option2": "从ATM机提款",
     "QuizQuestion95Option3": "a和b",
     "QuizQuestion95Option4": "访问中国境外",
     "QuizQuestion96Option1": "是",
@@ -1324,7 +1324,7 @@ ubsApp.translation = {
     "hasHighestScoreMessage": "玩家 {{playerName}} 获得了最高分但还是比通常的利润要少.",
     "kycHelpImage": "images/incometaxhelp.png",
     "salesNoItemMessage": "库存太低导致没有足够数量货物卖出",
-    "advantageCardConvertSuccess": "恭喜您现在拥有 {{advantageCard}}  高级卡片　{{reputationPoints}} 商誉已被使用.",
+    "advantageCardConvertSuccess": "恭喜您现在拥有 {{advantageCard}}  优惠卡　{{reputationPoints}} 商誉已被使用.",
     "decisionBankBalanceTitle": "银行余额",
 
 
@@ -1428,14 +1428,14 @@ ubsApp.translation = {
     "purchaseVideoOnline": "http://prathamopenschool.org/UBS/FinLit/videos/purchase_help_english.mp4",
     "instructionVideo": "videos/instructions_english.mp4",
     "instructionVideoOnline": "http://prathamopenschool.org/UBS/FinLit/videos/instructions_english.mp4",
-    "introVideo": "videos/intro_english.mp4",
-    "introVideoOnline": "http://prathamopenschool.org/UBS/FinLit/videos/intro_english.mp4",
+    "introVideo": "videos/intro_chinese.mp4",
+    "introVideoOnline": "videos/intro_chinese.mp4",
     //"salesAnswerHelp" : "<embed src=\\\"pdf/SalesHelp.pdf#toolbar=0&navpanes=0&scrollbar=0&view=fitH\\\" width=\\\"{{screenWidth}}px\\\" height=\\\"{{screenHeight}}px\\\" internalinstanceid=\\\"12\\\">",
     "salesAnswerHelp": "<img src=\\\"images/helpdoc/SalesHelpChinese.jpg\\\" width=\\\"100%\\\" ></img>",
     "decisionHelp": "<img src=\\\"images/helpdoc/DecisionHelpChinese.jpg\\\" width=\\\"100%\\\" ></img>",
     "LUCK HELP": "<img src=\\\"images/helpdoc/LuckHelpChinese.jpg\\\" width=\\\"100%\\\"></img>",
     "quizGeneralHelp": "<img src=\\\"images/helpdoc/GeneralHelpChinese.jpg\\\" width=\\\"100%\\\"> </img>",
-    "decisionSameMessaage": "Your reputation points and bank balance remain as is",
+    "decisionSameMessaage": "你的商誉和银行账户没有发生变化。",
     "kycPanAadharVideo": "videos/kycPanAadhar.mp4",
     "kycPanAadharVideoOnline": "http://prathamopenschool.org/UBS/FinLit/videos/kycPanAadhar.mp4",
     "gstVideo": "videos/gst.mp4",

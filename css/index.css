@@ -147,7 +147,7 @@ width: 100%;
    
 }
 #result{
-    color:red;
+    color: rgb(179, 62, 58);
     text-align: center;
     margin-top: 2%;
 }
@@ -251,7 +251,7 @@ width: 100%;
     padding:1%;
     background-color:transparent;
     border:1px solid black;
-    border-image: url(../images/border_orange.png) 5% round;
+    border-image: url(../images/border_orange.png) 3% round;
     border-width: 20px;
 }
 
@@ -293,8 +293,8 @@ width: 100%;
 .paymentPayButton{
     padding:5px;
     border:0;
-    color:#123503;
-    background-image:url('../images/buttonsmall.png');
+    color:white;
+    background-image:url('../images/buttonAction.png');
     background-size: 100% 100%;
     background-color:transparent;
     background-repeat: no-repeat;
@@ -317,6 +317,7 @@ width: 100%;
     background-size: 100% 100%;
     background-color:transparent;
     font-weight: bold;
+    width: 60%;
 }
 
 .wildCardButton{

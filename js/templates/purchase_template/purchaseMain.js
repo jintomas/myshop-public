@@ -180,7 +180,7 @@ resultMessage=ubsApp.translation["pleaseConfirm"];
 ubsApp.openPopup({
     "message" : resultMessage,
     "header" : ubsApp.getTranslation("purchaseHeader"),
-    "headerStyle" : "text-align: center;  color: red; font-weight: 700;"
+    "headerStyle" : "text-align: center;  color: rgb(173, 57, 41); font-weight: 700;"
 
 
 });
@@ -189,7 +189,7 @@ resultMessage="";
 if(resultMessage != "") {
     ubsApp.openPopup({ "message" : resultMessage,
                  "header" : ubsApp.getTranslation("purchaseHeader"),
-                 "headerStyle" : "text-align: center;  color: red;"
+                 "headerStyle" : "text-align: center;  color: rgb(173, 57, 41);"
                       });
 }
 }

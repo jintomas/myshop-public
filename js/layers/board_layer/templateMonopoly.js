@@ -84,7 +84,7 @@ monopoly.boardTemplate='<div class="responsive">'+
 
                     '<div class="centerDiceRow">'+monopoly.rollingDiceTemplate+'</div>'+
                     '<div class="centerDiceRow">'+
-                        '<button id="rollIt" class="sideScoreBoardActionButton" onclick="monopoly.rollDice()" style="width: 15%;padding: 1%;padding-bottom: 2.8%;">{{rollIt}}</button>'+
+                        '<button id="rollIt" class="sideScoreBoardActionButton" onclick="monopoly.rollDice()" style="width: 15%;padding: 1%;padding-bottom: 1%;">{{rollIt}}</button>'+
                     '</div>'+
                 '</div>'+
             '</div>'+
@@ -136,9 +136,9 @@ monopoly.sideScoreBoardTemplate=
 '        <span id="debt" class="sideScoreBoardCol"> {{debtAmount}}</span>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" style="font-size: 1.1vmax;" onclick="ubsApp.openTransferToBank()">{{transferTitle}}</button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" style="font-size: 1.1vmax;" onclick="ubsApp.openWithdrawFromBank()">{{withdrawTitle}}</button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" style="font-size: 1.1vmax;" onclick="ubsApp.openPayOffScenario()">{{payOffTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openTransferToBank()">{{transferTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openWithdrawFromBank()">{{withdrawTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openPayOffScenario()">{{payOffTitle}}</button>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '       <hr>'+
@@ -172,9 +172,9 @@ monopoly.sideScoreBoardTemplate=
 '  </div>'+
 '</div>'+
 '  <div class="sideScoreBoardRow">'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()" style="padding-left: 7%;padding-right: 7%;padding-bottom: 4%;">{{quizTitle}}</button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'instructionHelp\')">{{help}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()" style="padding-left: 7%;padding-right: 7%;padding-bottom: 4%; width: 30%">{{quizTitle}}</button>'+
 '       <button class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()">{{endGame}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'instructionHelp\')">{{help}}</button>'+
 '  </div>'+
 '</div>';
 

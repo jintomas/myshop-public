@@ -26,7 +26,7 @@ ubsApp.getSalesTemplate = function(templateConfig, tempVar){
                         	{
                         		'id':"closePopupButton",
                         		'name' : ubsApp.getTranslation("CLOSE"),
-                      			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup();	ubsApp.stopTimer();ubsApp.closeCurrentScenario();"
+                                  'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup();	ubsApp.stopTimer();ubsApp.closeCurrentScenario();"
                         	}
                         ]
                         });
@@ -105,7 +105,7 @@ ubsApp.validateAmount = function(showPopup = true) {
                 	   ubsApp.openPopup({
                            "message" : "请计算所有货物的金额. 你需要帮助么?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
                           "header" : ubsApp.getTranslation("ERROR"),
-                          "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                          "headerStyle" : "text-align: center;  color: rgb(179, 62, 58); font-weight: 700;",
                           "imageUrl" : "",
                            'buttons' : [
                                {
@@ -114,8 +114,9 @@ ubsApp.validateAmount = function(showPopup = true) {
                                },
 
                                {
-                                           'name' : ubsApp.getTranslation("no"),
-                                           'action': "ubsApp.closePopup();"
+                                    'name' : ubsApp.getTranslation("no"),
+                                    'action': "ubsApp.closePopup();",
+                                    'isCancel': true 
                                }
                            ]
                        });
@@ -130,7 +131,7 @@ ubsApp.validateAmount = function(showPopup = true) {
              ubsApp.openPopup({
                                    "message" : "Please calculate total amount. Do you need any help?",//ubsApp.getTranslation("quizLimitReachedForWeek"),
                                   "header" : ubsApp.getTranslation("ERROR"),
-                                  "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+                                  "headerStyle" : "text-align: center;  color: rgb(179, 62, 58); font-weight: 700;",
                                   "imageUrl" : "",
                                    'buttons' : [
                                        {
@@ -140,7 +141,8 @@ ubsApp.validateAmount = function(showPopup = true) {
 
                                        {
                                                    'name' : ubsApp.getTranslation("no"),
-                                                   'action': "ubsApp.closePopup();"
+                                                   'action': "ubsApp.closePopup();",
+                                                   'isCancel': true 
                                        }
                                    ]
                                });
@@ -229,7 +231,8 @@ ubsApp.reduceInventory= function(page,amount,hideScenarios,total,totalTime, star
                 	{
                 		'id':"closePopupButton",
                 		'name' : ubsApp.getTranslation("no"),
-              			'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup()"
+                          'action': "ubsApp.raiseAudioEvent(document.getElementById('closePopupButton'), 'saleEnd');ubsApp.closePopup()",
+                        'isCancel': true
                 	}
                 ]
                });
