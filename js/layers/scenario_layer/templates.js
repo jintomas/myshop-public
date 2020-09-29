@@ -1260,9 +1260,9 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            ''+
                            ''+
                            '        <div style="display:inline-block;width:100%;">'+
-                           '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonAction.png);background-size: 100% 100%;width: fit-content;    padding: 1%; padding-bottom: 2%; color: white;font-weight:bold; width: 16%;text-align: center;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
-                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonCancel.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: white;font-weight: bold; width: 15.5%;text-align: center; padding-right: 5%; padding-left: 2%;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
-                           '                 <div style="cursor: pointer;     float: right;padding: 3%;width: 13%;    background-size: 100% 100%;background-image: url(images/buttonHelpQ.png);"  onclick="ubsApp.startHelp(\'salesHelp\')" ></div>'+
+                           '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonAction.png);background-size: 100% 100%;width: fit-content;    padding: 2%; padding-bottom: 2%; color: white;font-weight:bold; width: 16%;text-align: center;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
+                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonCancel.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 2%; padding-bottom: 2%; color: white;font-weight: bold; width: 15.5%;text-align: center; padding-right: 5%; padding-left: 2%;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
+                           '                 <div style="cursor:pointer; float: left; padding:4%; width: 15.5%; background-size: 100% 100%;background-image: url(images/buttonHelpQ.png);"  onclick="ubsApp.startHelp(\'salesHelp\')" ></div>'+
 
                            '        </div>'+
                            '</div>'+
