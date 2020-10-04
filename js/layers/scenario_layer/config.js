@@ -11,6 +11,7 @@
 				"templateType": "insurance",
 				"insuranceType":"{{insuranceType}}",
 				"helpPageName":"decisionHelp",
+				"help":"{{help}}",
 		        "Insurance":"{{Insurance}}",
 		        "insurance1":"{{insurance1}}",
 		        "insurance2":"{{insurance2}}",

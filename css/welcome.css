@@ -1,6 +1,6 @@
 .instructionButtons{
   background:url('../images/button long.png');
-  color: navy;
+  color: green;
   font-weight: bold;
   cursor: pointer;
   border: none;
@@ -10,12 +10,12 @@
   padding-bottom: 16%;
   font-size: large;
   text-align: center;
-  font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
+  font-family: 'Microsoft YaHei', 'STHeiti', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
 }
   
 .startButtons{
   background:url('../images/button long.png');
-  color: red;
+  color: rgb(173, 57, 41);
   cursor: pointer;
   border: none;
   background-size: 100% 100%;
@@ -23,21 +23,21 @@
   font-size: large;
   padding: 13px;
   padding-bottom: 17%;
-  font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
+  font-family: 'Microsoft YaHei', 'STHeiti', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
 }
 
 .redStrip{
    /*margin: 2%;*/
    width: 100%;
-   padding: -3.6% 1%;
-   background: url(../images/red_strip.png);
+   background: url(../images/blue_strip.png);
    height: 9vh;
    top: 32%;
    vertical-align: -webkit-baseline-middle;
    position: relative;
    text-align: center;
-   margin-top: 3vh;
-   font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 1.3vmax;
+   font-family: 'Microsoft YaHei',  'STHeiti', Arial, sans-serif;     
+   font-weight: bold;     
+   font-size: 1.3vmax;
   
 }
 
@@ -45,17 +45,12 @@
 
 .centered {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-weight: bold;
-   
-    font-family: 'Open Sans', Arial, sans-serif;     font-weight: bold;     font-size: 4vmax;
+    font-family:'Microsoft YaHei',  'STHeiti', Arial, sans-serif;    
+    font-weight: bold;     
+    font-size: 3vmax;
 }
-
-  
-  
-}
-
 

@@ -2256,7 +2256,7 @@ ubsApp.quizConfig =
         "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "2",
+      "answer" : "3",
       "optionName" : "q37",
       "options" : [ {
         "optionName" : "q37",
@@ -2442,7 +2442,7 @@ ubsApp.quizConfig =
         "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "3",
+      "answer" : "4",
       "optionName" : "q40",
       "options" : [ {
         "optionName" : "q40",
@@ -4225,7 +4225,7 @@ ubsApp.quizConfig =
         "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "4",
       "optionName" : "q69",
       "options" : [ {
         "optionName" : "q69",
@@ -5033,7 +5033,7 @@ ubsApp.quizConfig =
         "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "2",
       "optionName" : "q83",
       "options" : [ {
         "optionName" : "q83",
@@ -6451,7 +6451,7 @@ ubsApp.quizConfig =
         "reputationPoints" : 3.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "4",
       "optionName" : "q107",
       "options" : [ {
         "optionName" : "q107",
@@ -6575,7 +6575,7 @@ ubsApp.quizConfig =
         "reputationPoints" : 2.0,
         "cash" : 0
       },
-      "answer" : "1",
+      "answer" : "2",
       "optionName" : "q109",
       "options" : [ {
         "optionName" : "q109",

@@ -2,7 +2,7 @@ ubsApp.getPopupTemplate = function(templateConfig, tempVar){
     document.getElementById("templateContent").style.opacity="1";
     document.getElementById("templateContent").style["background-color"] = "transparent";
     ubsApp.startCurrentScenario();
-	tempVar.html += ubsApp.getPopupHtml(templateConfig);
+    tempVar.html += ubsApp.getPopupHtml(templateConfig);
 	ubsApp.popupConfig = {};
 }
 

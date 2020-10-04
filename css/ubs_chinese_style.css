@@ -1,0 +1,23 @@
+button, input, select, textarea {
+    font-family: 'Microsoft YaHei', 'STHeiti', Arial, sans-serif;
+}
+
+button 
+{
+    color: white
+}
+
+#increaseButton, #decreaseButton
+{
+    color: black;
+}
+
+.orange-container {
+    font-weight: 600;
+    width:85%;
+    height:45%;
+    background-color: transparent;
+    background-image: url(../images/border_orange.png);
+    background-size: 100% 100%;
+    padding: 1% 3%;
+}

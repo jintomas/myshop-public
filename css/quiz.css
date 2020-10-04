@@ -44,10 +44,10 @@
 	font-size: 2.5vmax;
 	text-transform: uppercase;
 	text-align: center;
-	color: white;
+	color: black;
 	font-weight: 600;
-	font-family: 'Open Sans', "Helvetica Rounded", Arial, sans-serif;
-	background: url('../images/quizstrip.png');
+	font-family: 'Microsoft YaHei',  'STHeiti', Arial, sans-serif;
+	/*background: url('../images/quizstrip.png');*/
 	background-size: 100% 100%;
 }
 #questionHeading{
@@ -59,16 +59,15 @@
 	height: auto;
 	overflow: hidden;
 	width: 70%;
-	background-color: #ffffff;
+	background-color: transparent;
 	padding: 1vw;
 	margin: 6% 10% 3% 15%;
 	font-weight: bold;
-	background-image: url('../images/redbgcommon.png');
 	background-size: 100% 100%;
 }
 
 #question_answer{
-	background-color: white;
+	background-color: transparent;
 	margin: 0.5% 2%;
 	padding: 0.7%;
 }
@@ -83,7 +82,7 @@
 }
 
 #answerHeader{
-	color: red;
+	color: rgb(179, 62, 58);
 	margin-left: 30%;
 	font-weight: bold;
 }
@@ -122,14 +121,14 @@
 }
 
 .quizOkButton {
-	background:url('../images/buttonsmall.png');
+	background:url('../images/buttonAction.png');
 	margin-left: 45%;
 	background-size: 100% 100%;
 }
 
 .quizSubmitButtons {
     margin-right: 5px;
-	background:url('../images/buttonsmall.png');
+	background:url('../images/buttonAction.png');
 	float: right;
 	background-size: 100% 100%;
 }
@@ -137,7 +136,7 @@
 .quizHelpButtons {
 	float: right;
 	margin-left: 5%;
-	background-image: url('../images/help-button.png');
+	background-image: url('../images/buttonHelpQ.png');
 	background-color: transparent;
 	height: auto;
 	background-size: 100% 100%;
@@ -179,4 +178,8 @@ input[class="quizButtons"]:focus {outline:0;}
 	padding: 0.4% 0% 0% 2%;
 	width: 70%;
 	margin-bottom: 0.5%;
+}
+
+#salesSubmitButton {
+	color: white;
 }

@@ -42,6 +42,7 @@ let templateName = ["static", "decision","purchase","withdrawFromBank","advantag
 let templateMap = {};
 let offlinePurchaseClicked=false;
 ubsApp.isAndroidEnabled=false;
+ubsApp.isChinaVer = true;
 ubsApp.popupConfig = {};
 
 $(document).ready(function(){

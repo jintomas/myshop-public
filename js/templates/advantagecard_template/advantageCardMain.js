@@ -6,8 +6,8 @@ ubsApp.getAdvantageCardTemplate=function(templateConfig,tempVar){
     templateConfig.convertReputationMessage = ubsApp.getTranslation("convertReputationMessage");
     templateConfig.CANCEL = ubsApp.getTranslation("cancelTitle");
     templateConfig.OK = ubsApp.getTranslation("OK");
-    templateConfig.currentWeekCash = "₹ "+ userArray[playerChance].getplayerScore();
-    templateConfig.currentWeekBankBalance = "₹ "+ userArray[playerChance].getBankBalance();
+    templateConfig.currentWeekCash = ubsApp.getTranslation("Rs")+" "+ userArray[playerChance].getplayerScore();
+    templateConfig.currentWeekBankBalance = ubsApp.getTranslation("Rs")+" "+ userArray[playerChance].getBankBalance();
     templateConfig.currentWeekReputationPts = userArray[playerChance].getReputationPts();
     templateConfig.currentWeekCredit = userArray[playerChance].getCredit();
     templateConfig.currentWeekAdvantageCard = userArray[playerChance].getAdvantageCardNumber();
@@ -61,7 +61,7 @@ ubsApp.covertReputationToWildCard=function(){
         ubsApp.openPopup({
             'message' : ubsApp.translation["validReputationPts"],
             "header" : ubsApp.getTranslation("ERROR"),
-            "headerStyle" : "text-align: center;  color: red; font-weight: 700;",
+            "headerStyle" : "text-align: center;  color: rgb(179, 62, 58); font-weight: 700;",
         });
         }
 

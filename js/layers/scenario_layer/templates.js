@@ -308,16 +308,17 @@ ubsApp.leaderBoardTemplate=
                                ''+
                                '        </div>'+
                                ''+
-                               '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
+                               '        <div style="padding-bottom:10px;"> <!--img src="images/red header.png" style="width:100%;"-->  </div>'+
                                '        '+
                                '        <div style="display: inline-block;width: 100%;font-weight:bold;">'+
-                               '<div id="addPlayerValidationMessage" style="color:red;margin-bottom: 2%;text-align: center;"> </div>'+
+                               '<div id="addPlayerValidationMessage" style="color: rgb(179, 62, 58);margin-bottom: 2%;text-align: center;"> </div>'+
 
                                '            <div style="display: table;width: 80%;     margin-left: 10%;    margin-bottom: 2%;">'+
                                '                <div style="display: table-row;">'+
                                '                        <div style="display: table-cell;">{{name}}</div>'+
                                '                        <div style="display: table-cell;">{{age}}</div>'+
                                '                        <div style="display: table-cell; ">{{gender}}</div>'+
+								'						<div style="display: table-cell; ">{{org}}</div>'+
                                '                        <div style="display: table-cell; "></div>'+
                                '                        <div style="display: table-cell; "></div>'+
 
@@ -327,7 +328,8 @@ ubsApp.leaderBoardTemplate=
                                '                        <div style="display: table-cell;"><input  style="" id="playerNameInput"></input></div>'+
                                '                        <div style="display: table-cell;"><input type="number" style="" id="playerAge"></input></div>'+
                                '                        <div style="display: table-cell;"><select style="" id="playerGender"><option id="male" value="male">{{MALE}}</option><option id="female" value="female">{{FEMALE}}</option></select></div>'+
-                               '                        <div style="display: table-cell; vertical-align: middle;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%; padding-bottom: 1%; color: green;font-weight:bold;text-align: center;" onclick="ubsApp.addNewPlayer()" >{{add}}</div>'+
+								'						<div style="display: table-cell;"><select style="" id="playerOrg"><option id="Org1" value="UBS">UBS</option><option id="Org2" value="MS">MS</option></select></div>'+
+                               '                        <div style="display: table-cell; vertical-align: middle;cursor:pointer; background-image: url(images/buttonAction.png);background-size: 100% 100%; padding-bottom: 1%; color: white;font-weight:bold;text-align: center;" onclick="ubsApp.addNewPlayer()" >{{add}}</div>'+
 
                                '                </div>'+
                                '{{#if isStudentAdded}}' +
@@ -346,8 +348,7 @@ ubsApp.leaderBoardTemplate=
                                '                        <div style="display: table-cell;"><input  style="" id="{{StudentId}}Name" value="{{StudentName}}"></input></div>'+
                                '                        <div style="display: table-cell;"><input type="number" style="" id="{{StudentId}}Age" value="{{StudentAge}}"></input></div>'+
                                '                        <div style="display: table-cell;"><select style="" id="{{StudentId}}Gender"><option {{#if isMale}} selected="selected" {{/if}} id="male" value="male">{{MALE}}</option><option {{#if isFemale}} selected="selected" {{/if}} id="female" value="female">{{FEMALE}}</option></select></div>'+
-                               //'                        <div style="display: table-cell;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;padding: 1.5%; color: green;font-weight:bold; text-align: center;" onclick="ubsApp.updatePlayer(\'{{StudentId}}\')" >{{update}}</div>'+
-                               //'                        <div style="display: table-cell;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;padding: 1.5%; color: green;font-weight:bold; text-align: center;" onclick="ubsApp.deletePlayer(\'{{StudentId}}\')" >{{delete}}</div>'+
+								'						<div style="display: table-cell;"><select style="" id="{{StudentId}}Org"><option selected="selected" value="{{StudentOrg}}">{{StudentOrg}}</option></select></div>'+
                                '                        <div style="display: table-cell; text-align:center" onclick="ubsApp.updatePlayer(\'{{StudentId}}\')"  ><img style="width:25%;cursor:pointer;" src="images/update.png"></img></div>'+
                                '                        <div style="display: table-cell;" onclick="ubsApp.deletePlayer(\'{{StudentId}}\')" ><img style="width:25%;cursor:pointer;" src="images/delete.png"></img></div>'+
                               '                </div>'+
@@ -358,14 +359,14 @@ ubsApp.leaderBoardTemplate=
                                '        </div>'+
                                ''+
                                '        <div style="display:inline-block;width:100%;">'+
-                               '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: red;font-weight: bold; width: 15.5%;text-align: center;" onclick="ubsApp.closeCurrentScenario()" >{{cancel}}</div>'+
+                               '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: white;font-weight: bold; width: 15.5%;text-align: center;" onclick="ubsApp.closeCurrentScenario()" >{{cancel}}</div>'+
 
                                '        </div>'+
                                '</div>'+
                                '</div>';
     ubsApp.salesTemplate=
     '<div class="mainDiv row" style="height:100%;width:100%">'+
-    '       <div class="salesScreenTitle" style="color:white">'+
+    '       <div class="salesScreenTitle">'+
                     '           {{sale}}' +
                     '       </div>'+
                     '           <div class="salesIconContainer">'+
@@ -411,7 +412,7 @@ ubsApp.leaderBoardTemplate=
 '        <div style="background-color: white;height: 100%;padding: 2px;">'+
 '           <div id="title">{{receiptHeading}}</div>'+
 '       '+
-'           <img src="images/red header.png" style="width:100%" >'+
+'           <!--img src="images/red header.png" style="width:100%" -->'+
 '           <div id="bill">'+
 '               <div class="table-responsive" style="overflow-x: unset;">          '+
 '                 <table class="table table-bordered">'+
@@ -436,7 +437,7 @@ ubsApp.leaderBoardTemplate=
 '                       {{/each}}'+
 '                     {{#if discount}}'+
 '                     <tr>'+
-'                       <td colspan="4" style="color:#009933;vertical-align:middle;"><i> {{Discount}}: &nbsp;&nbsp;{{discount}}</i></td>'+
+'                       <td colspan="4" style="color:#009933;vertical-align:middle;">{{Discount}}: &nbsp;&nbsp;{{discount}}</td>'+
 '                       <td ><input id = "discount" type="number" name="amt" class="amount saleInputButtons" oninput="ubsApp.calculateBill()" ></td>  '+
 '                     </tr>'+
 '                     {{/if}}'+
@@ -457,7 +458,7 @@ ubsApp.leaderBoardTemplate=
 '    </div>'+
 '   <div class="col-md-5 col-sm-5 col-xs-5" style="    margin-top: 5%;">'+
 '   <div style="display: flex;flex-direction: row;justify-content: space-around;" >' +
-'       <div class="tools" style="color:white;    text-align: center;padding-right: 6%;">'+
+'       <div class="tools"   text-align: center;padding-right: 6%;">'+
 '           {{Tools}}'+
 '       </div>'+
         '<div style="text-align: center;">'+
@@ -477,29 +478,29 @@ ubsApp.leaderBoardTemplate=
 '           <input id="calcButton" class="button gray" type="button" value="7" onclick="addToDisplay(7)">'+
 '           <input id="calcButton" class="button gray" type="button" value="8" onclick="addToDisplay(8)">'+
 '           <input id="calcButton" class="button gray" type="button" value="9" onclick="addToDisplay(9)">'+
-'           <input id="calcButton" class="button pink" type="button" value="/" onclick="addToDisplay(\'/\')">'+
+'           <input id="calcButton" class="button green" type="button" value="/" onclick="addToDisplay(\'/\')">'+
 '           <input id="calcButton" class="button gray" type="button" value="4" onclick="addToDisplay(4)">'+
 '           <input id="calcButton" class="button gray" type="button" value="5" onclick="addToDisplay(5)">'+
 '           <input id="calcButton" class="button gray" type="button" value="6" onclick="addToDisplay(6)">'+
-'           <input id="calcButton" class="button pink" type="button" value="*" onclick="addToDisplay(\'*\')">'+
+'           <input id="calcButton" class="button green" type="button" value="*" onclick="addToDisplay(\'*\')">'+
 '           <input id="calcButton" class="button gray" type="button" value="1" onclick="addToDisplay(1)">'+
 '           <input id="calcButton" class="button gray" type="button" value="2" onclick="addToDisplay(2)">'+
 '           <input id="calcButton" class="button gray" type="button" value="3" onclick="addToDisplay(3)">'+
-'           <input id="calcButton" class="button pink" type="button" value="+" onclick="addToDisplay(\'+\')">'+
+'           <input id="calcButton" class="button green" type="button" value="+" onclick="addToDisplay(\'+\')">'+
 '           <input id="calcButton" class="button orange" type="button" value="C" onclick="addToDisplay(\'C\')">'+
 '           <input id="calcButton" class="button gray" type="button" value="0" onclick="addToDisplay(0)">'+
 '           <input id="calcButton" class="button orange" type="button" value="=" onclick="addToDisplay(\'=\')">'+
-'           <input id="calcButton" class="button pink" type="button" value="-" onclick="addToDisplay(\'-\')">'+
+'           <input id="calcButton" class="button green" type="button" value="-" onclick="addToDisplay(\'-\')">'+
 '           <input id="calcButton" class="button orange" type="button" value="DEL" onclick="addToDisplay(\'DEL\')">'+
 '           <input id="calcButton" class="button gray" type="button" value="." onclick="addToDisplay(\'.\')">'+
 '           <input id="calcButton" class="button orange" type="button" value="+/-" disabled onclick="addToDisplay(\'\')">'+
 '       </div>'+
 '<div style="display:flex; width:100%; text-align:left;     margin-top: 2%;">'+
-'                  <div id= "salesSubmitButton" class="submitButton" style="cursor:pointer" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\', \'{{startTime}}\');}">'+
+'                  <div id= "salesSubmitButton" class="submitButton" style="cursor:pointer;padding:3%" onclick="if (ubsApp.validateAmount() !== false) { ubsApp.reduceInventory(\' {{onClickPage.nextPage}} \',\'{{amount}}\', \'{{onClickPage.hideScenarios}}\',\'{{tempTotal}}\',\'{{time}}\', \'{{startTime}}\');}">'+
 '           {{SUBMIT}}'+
 ' </div>' +
-'           <div class="helpBtn" style="padding: 6%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></div>'+
-'<div id="salesSubmitButton" class="submitButton" style="cursor:pointer;color: black;" onclick="ubsApp.startHelp(\'salesAnswerHelp\');">           GUIDELINES </div>' +
+'<div id="salesSubmitButton" class="submitButton" style="cursor:pointer;color: white;padding:3%" onclick="ubsApp.startHelp(\'salesAnswerHelp\');">           使用指南 </div>' +
+'           <div class="helpBtn" style="padding:2%;" onclick="ubsApp.startHelp(\'{{helpPageName}}\')">帮助</div>'+
 '              </div>'+
 
 //'       <img class="butt" id="help" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" src="images/help.png" />'+
@@ -516,7 +517,7 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '   </div>'+
 '   <div id="question_answer_background">'+
 '   <div id="question_answer">'+
-'       <img src="images/red header.png" style="width:100%; height:100%">'+
+'       <!--img src="images/red header.png" style="width:100%; height:100%"-->'+
 '       <span id="quizQuestionNumber"></span><span id="quizQuestion">{{question}}</span>'+
 '       {{#if quizResult}}'+
 '           <br><b><div id="quizResult"></div>'+
@@ -528,21 +529,21 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '           <label for="{{id}}" class="quizOptionsStyle"><input type="radio" style="{{radio_style}}" name="{{optionName}}" value="{{optionValue}}" id="{{id}}" />{{optionValue}}</label>'+
 '           {{/each}}'+
 '       </div>'+
-'       <div id="quizOk"><input type="submit" style="color:green" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\', \'{{helpPageName}}\',\'{{entryPoint}}\', \'{{luckScenarioName}}\')" value={{okTitle}}></div>'+
+'       <div id="quizOk"><input type="submit" style="color:white" class=\'quizButtons quizOkButton\' name="{{optionName}}" onclick="ubsApp.checkAnswerAndRenderNextPage(\'{{onClickPage.nextPage}}\',\'{{answer}}\',\'{{optionName}}\', \'{{questionId}}\',\'{{credit.reputationPoints}}\', \'{{startTime}}\', \'{{helpPageName}}\',\'{{entryPoint}}\', \'{{luckScenarioName}}\')" value={{okTitle}}></div>'+
 '       {{/if}}'+
 '   </div>'+
 '   <div id="answerDiv" style="display:none;">'+
 '       <span id="answerHeader" class="popupHeaderFontSize"></span><br>'+
 '       <span id="answerMessage"></span>'+
 '       <div id="quizOk">'+
-'           <button id="wrongAnswerOk" style="color:green" class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >{{okTitle}}</button>'+
+'           <button id="wrongAnswerOk" style="color:white" class=\'quizButtons quizOkButton\' onclick="ubsApp.displayNextQuizQuestion(\'{{onClickPage.nextPage}}\')" >{{okTitle}}</button>'+
 '       </div>'+
 '   </div>'+
 '</div>'+
 '<img src="{{gameLogo}}" class="quizGameLogoImage">' +
 '<div id="quizOkButtons" style="display:flex;width:100%;margin-left:68%">'+
 '   <button id="quizDone" style="color:green" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">{{doneTitle}}</button>'+
-'   <button id="quizCancel" style="color:red" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">{{cancelTitle}}</button>'+
+'   <button id="quizCancel" style="color:white; background: url(../images/buttonCancel.png);" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">{{cancelTitle}}</button>'+
 '   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
 '</div>'+
 '</div>';
@@ -673,7 +674,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '            </div>'+
 '            <div class="purchaseLContainer"><div style="background-color: white;height: 95%;    margin: 3% 3%;overflow: auto;">'+
 '                <div class="row">'+
-'                    <img src="images/red header.png" class="headerImage">'+
+'                    <!--img src="images/red header.png" class="headerImage"-->'+
 '                </div>'+
 '                <br>'+
 '                <div class="row">'+
@@ -704,7 +705,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '        <div class="columnPurchase">'+
 '            <div class="purchaseMContainer"> <div style="background-color: white;height: 97%;    margin: 3% 3%;overflow: auto;">'+
 '                <div class="row">'+
-'                    <img src="images/red header.png" class="headerImage">'+
+'                    <!--img src="images/red header.png" class="headerImage"-->'+
 '                </div>'+
 '                <p style= "text-align:center;font-weight:600;">{{inventoryTitle}}</p>'+
 '                <div class="row" style="height: 60%; overflow:hidden;">'+
@@ -740,7 +741,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '            </div>'+
 '            <div class="purchaseRContainer"><div style="background-color: white;height: 92%;    margin: 3% 3%;overflow: auto;">'+
 '                <div class="row">'+
-'                    <img src="images/red header.png" class="headerImage">'+
+'                    <!--img src="images/red header.png" class="headerImage"-->'+
 '                </div>'+
 '                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-8">{{newInventoryLevelTitle}}:</div>'+
@@ -751,11 +752,11 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '                </div>'+
 '                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-6 col-lg-6">{{inventoryValueTitle}}:</div>'+
-'                    <div class="col-md-6 col-lg-6" style="text-align: right;">₹ <span id="updatedInventoryValue"  style="width: 45%;    color: black;" ></span></div>'+
+'                    <div class="col-md-6 col-lg-6" style="text-align: right;">￥ <span id="updatedInventoryValue"  style="width: 45%;    color: black;" ></span></div>'+
 '                </div>'+
 '                <div class="row" style="padding: 1%;">'+
 '                    <div class="col-md-6 col-lg-6">{{costTitle}}:</div>'+
-'                    <div class="col-md-6 col-lg-6" style="text-align: right;">₹ <span  id="newCostText"  style="width: 45%; color: black;" ></span></div>'+
+'                    <div class="col-md-6 col-lg-6" style="text-align: right;">￥ <span  id="newCostText"  style="width: 45%; color: black;" ></span></div>'+
 '                </div>'+
 '                <div id="parent1" class="row" style="padding: 1%;">'+
 '                    <div class="col-md-6 col-lg-6">{{payByTitle}}:</div>'+
@@ -778,7 +779,7 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 '            <div class="row" style="height:20vmax;">'+
 '                    <div class="confirmButton mainButtons" onclick="ubsApp.pay(\'{{startTime}}\'); ">{{doneTitle}}</div>'+
 '                    <div class="confirmButton mainButtons" id="target_cancel" onclick="ubsApp.closeCurrentScenario(); {{#if openNextMove }} ubsApp.nextMove(); {{/if}}">{{noThanksTitle}}</div>'+
-'                    <div class="helpBtn mainButtons" onclick="ubsApp.startHelp(\'purchaseHelp\')"></div>'+
+'                    <div class="helpBtn mainButtons" onclick="ubsApp.startHelp(\'purchaseHelp\')">{{help}}</div>'+
 '            </div>'+
 '        </div>'+
 '    </div>'+
@@ -787,9 +788,9 @@ ubsApp.purchaseTemplate = '<div class="container-fluid mainPurchaseDiv">'+
 ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relative;overflow:hidden">'+
 '       <img src="images/background.png" style="width:100%;height:100%;">'+
 '   {{#if isLuckCategory}}'+
-'           <div class="luckScreenTitle" style="color:white">'+
+'           <div class="luckScreenTitle">'+
 '       {{else}}'+
-'            <div class="paymentScreenTitle" style="color:white">'+
+'            <div class="paymentScreenTitle">'+
 '   {{/if}}'+
 '            {{scenarioTitle}}'+
 '       </div>'+
@@ -804,10 +805,10 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '       <div id="scenarioOutline">' + /* Wrapper div*/
 
 '       <div id="luckHeaderBorderImage">' +
-'            <img src="images/red header.png" style="width:100%; height:100%">'+
+'            <!--img src="images/red header.png" style="width:100%; height:100%"-->'+
 '       </div>' +
 
-'       <div id="scenario" style="background-color:white; color:black;">'+
+'       <div id="scenario" style="background-color:transparent; color:black;">'+
 '           {{scenario}}<br>'+
 '       </div>'+
 '       <div id="result"></div>'+
@@ -844,7 +845,7 @@ ubsApp.luckyUnluckyTemplate='<div style="width:100%;height:100%;position:relativ
 '           </div>'+
 '       </div>'+
 '       <div class="luckHelpIcon">'+
-'           <input type="image" style="width:100%;" src="images/help-button.png" onclick="ubsApp.startHelp(\'{{helpPageName}}\')" />'+
+'           <input type="image" style="width:100%; padding:13%" src="images/buttonHelpQ.png" onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></input>'+
 '       </div>'+
 '       <div class="luckGameIcon">'+
 '           <img style="width:100%;"src="{{gameLogo}}">'+
@@ -856,30 +857,30 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                      <div class="payOffTitle popupHeaderFontSize" align="center">'+
 '                           {{title}}'+
 '                      </div>'+
-'                      <div align="center"><img style="width: 100%;" src="images/red header.png"></div>'+
+'                      <div align="center"><!-- img style="width: 100%; height: 3vh" src="images/red header.png"--></div>'+
 '                      <div style="    margin-top: 5%;    margin-bottom: 5%;">'+
 '                           <span class="payOffSubTitleLeft">'+
 '                               {{cashTitle}} '+
-'                               <span id="cashValue" >₹ {{cash}}</span>'+
+'                               <span id="cashValue" >￥ {{cash}}</span>'+
 '                           </span>'+
 '                           <span class="payOffSubTitleRight">'+
 '                               {{bankBalanceTitle}} '+
-'                               <span id="bankBalanceValue">₹ {{bankBalance}}</span>'+
+'                               <span id="bankBalanceValue">￥ {{bankBalance}}</span>'+
 '                           </span>'+
 '                      </div>'+
 '                      <div style="margin: auto;     width: fit-content;">'+
 '                      {{#if #payOff}}'+
 '                           <div style="    margin-bottom: 3%;">'+
 '                               <span class="payOffSubTitleLeft">{{debtAmountTitle}}:</span>'+
-'                                    <span class="payOffDebtAmountValue"> ₹ <span id="debtValue">{{debt}}<span>'+
+'                                    <span class="payOffDebtAmountValue"> ￥ <span id="debtValue">{{debt}}<span>'+
 '                               </span><br>'+
 '                           </div>'+
 '                      {{else}}{{/if}}'+
 '                      <span class="payOffSubTitleLeft">'+
 '                           {{#if payOff}}'+
-'                               {{amountToPayTitle}} ₹ '+
+'                               {{amountToPayTitle}} ￥ '+
 '                           {{else}}'+
-'                               {{amountToTransferTitle}} ₹ '+
+'                               {{amountToTransferTitle}} ￥ '+
 '                           {{/if}}'+
 '                      </span>'+
 '                      <span class="payOffAmountToPayValue">'+
@@ -887,7 +888,7 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                      </span>'+
 '                      {{#if payOff}}'+
 '                           <br><br><span class="payOffSubTitleLeft">'+
-'                               {{modeOfPaymentTitle}} ₹ '+
+'                               {{modeOfPaymentTitle}} ￥ '+
 '                           </span>'+
 '                      {{/if}}'+
 '                      {{#if payOff}}'+
@@ -900,10 +901,10 @@ ubsApp.payOffTemplate='<div style="width:100%; height:100%; background-color:rgb
 '                      {{else}}{{/if}}'+
 '                      </div> <div class="payOffButtonContainer">'+
 '                      <div style="width:24%;" >'+
-'                           <button style="color:green;" class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
+'                           <button style="color:white;" class="payOffButton" {{#if payOff}}onclick="ubsApp.payDebt()"{{/if}} {{#if transfer}}onclick="ubsApp.transferToBank()"{{/if}} {{#if withdraw}}onclick="ubsApp.withdrawFromBank()"{{/if}}>{{#if payOff}}{{payTitle}}{{/if}} {{#if transfer}}{{transferTitle}}{{/if}} {{#if withdraw}}{{withdrawTitle}}{{/if}}</button>'+
 '                      </div>'+
 '                      <div style="width:24%;margin-left: 2%;" >'+
-'                           <button style="color:red;" class="payOffButton"  onclick="ubsApp.closeCurrentScenario(); {{#if openNextMove}} ubsApp.nextMove(); {{/if}}" >{{cancelTitle}}</button>'+
+'                           <button style="color:white;background-image: url(images/buttonCancel.png);" class="payOffButton"  onclick="ubsApp.closeCurrentScenario(); {{#if openNextMove}} ubsApp.nextMove(); {{/if}}" >{{cancelTitle}}</button>'+
 '                      </div>' +
 '</div>'+
 '       <div id="result"></div>'+
@@ -989,9 +990,9 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 //'               : <br>'+
 //'           </div>'+
 //'           <div class="col-md-5">'+
-//'               <span>₹ {{balance}}</span><br>'+
-//'               <span>₹ {{cash}}</span><br>'+
-//'               <span>₹ {{debt}}</span><br>'+
+//'               <span>￥ {{balance}}</span><br>'+
+//'               <span>￥ {{cash}}</span><br>'+
+//'               <span>￥ {{debt}}</span><br>'+
 //'           </div>'+
 //'       </div>'+
 //'       <div class="row" id="rightInfo">'+
@@ -1034,11 +1035,11 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 // '                </fieldset>'+
 // '            </div>'+
 // '            <div id="insurancePayment" class="row">'+
-// '                <label for="annualPremium" class="insuranceValue">{{premium}}(₹)</label>'+
+// '                <label for="annualPremium" class="insuranceValue">{{premium}}(￥)</label>'+
 // '                <input type="number" id="annualPremium" name="premium" value="0" readonly >'+
 // '            </div>'+
 // '            <div>'+
-// '                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(₹)</label>'+
+// '                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(￥)</label>'+
 // '                <input type="number" id="sumAssured" name="sum"  value="0" readonly >'+
 // '            </div>'+
 // '            <br>'+
@@ -1053,7 +1054,7 @@ ubsApp.centerScoreBoardTemplate='<div class="centerScoreBoardMainContainer">'+
 // '            <br>'+
 // '            <div id="buy_cancel" style="align:center;">'+
 // '                <span id="decisionBuy" class="insuranceButtons" style="color:green; margin-right: 2%;" onclick="ubsApp.buyInsurance(\'{{page}}\')">{{buy}}</span>'+
-// '                <span id="decisionCancel" class="insuranceButtons" style="color:red;" onclick="ubsApp.nextMove()">{{cancel}}</span>'+
+// '                <span id="decisionCancel" class="insuranceButtons" style="color: rgb(179, 62, 58);" onclick="ubsApp.nextMove()">{{cancel}}</span>'+
 // '            </div>'+
 // '        </div>'+
 // '    </div>'+
@@ -1105,9 +1106,10 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '   </div>'+
 ''+
 '<div id="question_answer_decision_border">'+
+'<div class="orange-container">'+
 '   <div id="question_answer_decision">'+
 '        <div id="insuranceTypesTitle">{{insuranceType}}</div>'+
-'        <img src="images/red header.png" style="width:100%; height:100%">'+
+'        <!--<img src="images/red header.png" style="width:100%; height:100%">-->'+
 '        <div id="insuranceSelection">'+
 '            <div id="typesOfInsurance">'+
 '                <fieldset id="insuranceTypesSelection" style="font-size: 1.5vmax;">'+
@@ -1120,11 +1122,11 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '                </fieldset>'+
 '            </div> <div style="display: inline-block;">'+
 '            <div id="insurancePayment" style="width: 45%;float: left;" class="row">'+
-'                <label for="annualPremium" class="insuranceValue">{{premium}}(₹)</label>'+
+'                <label for="annualPremium" class="insuranceValue">{{premium}}(￥)</label>'+
 '                <input style="width: 30%;" type="number" id="annualPremium" name="premium" value="0" readonly >'+
 '            </div>'+
 '            <div style="width: 45%;float: right;margin-top: 2%;">'+
-'                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(₹)</label>'+
+'                <label for="annualPremium" class="insuranceValue">{{sumAssured}}(￥)</label>'+
 '                <input style="width: 30%;" type="number" id="sumAssured" name="sum"  value="0" readonly >'+
 '            </div> </div>'+
 '            <br>'+
@@ -1139,24 +1141,25 @@ ubsApp.insuranceTemplate = '<div id="decisonMaking">'+
 '            <br>'+
 '            <div id="buy_cancel" style="align:center;">'+
 '                <span id="decisionBuy" class="insuranceButtons" style="color:green; margin-right: 2%;" onclick="ubsApp.buyInsurance(\'{{page}}\')">{{buy}}</span>'+
-'                <span id="decisionCancel" class="insuranceButtons" style="color:red;" onclick="ubsApp.nextMove()">{{cancel}}</span>'+
+'                <span id="decisionCancel" class="insuranceButtons" style="color: rgb(179, 62, 58);" onclick="ubsApp.nextMove()">{{cancel}}</span>'+
 '            </div>'+
 '        </div>'+
+'</div>'+
 '</div>'+
 '</div>'+
 '<img src="{{gameLogo}}" class="decisionGameLogoImage">' +
 '       <div class="row" id="leftInfo">'+
 '           <div class="col-md-10">'+
-'               <span id="decisionBankBalance" style="word-spacing: 1.5vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block">{{cashTitle}} ₹{{cash}}</span>      <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ₹{{debt}}</span>       <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 15vmax;display:block">{{bankBalanceTitle}} ￥{{balance}}</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block">{{cashTitle}} ￥{{cash}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 10vmax;display:block"">{{debtTitle}} ￥{{debt}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
 '       <div class="row" id="rightInfo" style="position: relative;">'+
 '           <div class="col-md-6" >'+
-'               <span id="decisionBankBalance" style="word-spacing: 7.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ₹{{inventoryValue}}</span>      <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} {{reputationPts}}</span>       <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 5.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ￥{{inventoryValue}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 4.5vmax;display:block">{{repPoints}} {{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       <div class="decisionHelpButtons" onclick="ubsApp.startHelp(\'decisionHelp\')" style="position: absolute;right: 10%;bottom: 20%;"></div>'+
 '       </div>'+
@@ -1170,8 +1173,9 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '   </div>'+
 ''+
 '<div id="question_answer_decision_border">'+
+'<div class="orange-container">'+
 '   <div id="question_answer_decision">'+
-'       <img src="images/red header.png" style="width:100%; height:100%">'+
+'       <!--<img src="images/red header.png" style="width:100%; height:100%">-->'+
 '       <div id="Decision Description">'+
 '           {{question}}'+
 '       </div>'+
@@ -1188,19 +1192,20 @@ ubsApp.decisionTemplate = '<div id="decisonMaking">'+
 '       {{/if}}'+
 '   </div>'+
 '</div>'+
+'</div>'+
 '       '+
 '<img src="{{gameLogo}}" class="decisionGameLogoImage">' +
-'       <div class="row" id="leftInfo">'+
+'       <div class="row" id="leftInfo" style="position:absolute;left:25%;">'+
 '           <div class="col-md-12" style="width:80%;">'+
-'               <span id="decisionBankBalance" style="word-spacing: 0.2vmax;display:block">{{bankBalanceTitle}} ₹{{balance}}</span> <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 8vmax;display:block">{{cashTitle}} ₹{{cash}}</span>      <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 8vmax;display:block"">{{debtTitle}} ₹{{debt}}</span>       <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 4vmax;display:block">{{bankBalanceTitle}} ￥{{balance}}</span> <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 8vmax;display:block">{{cashTitle}} ￥{{cash}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 8vmax;display:block"">{{debtTitle}} ￥{{debt}}</span>       <br>'+
 '           </div>'+
 '       </div>'+
-'       <div class="row" id="rightInfo" style="position: relative;">'+
+'       <div class="row" id="rightInfo" style="position: absolute;left:25%;">'+
 '           <div class="col-md-12" style="width:45%;">'+
 '               <span id="decisionBankBalance" style="word-spacing: 7.5vmax;display:block">{{inventoryTitle}} {{inventory}}%</span> <br>'+
-'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ₹{{inventoryValue}}</span>      <br>'+
+'               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{invVal}} ￥{{inventoryValue}}</span>      <br>'+
 '               <span id="decisionBankBalance" style="word-spacing: 2.5vmax;display:block">{{repPoints}} {{reputationPts}}</span>       <br>'+
 '           </div>'+
 '       <div class="decisionHelpButtons" onclick="ubsApp.startHelp(\'decisionHelp\')" style="position: absolute;right: 10%;bottom: 20%;"></div>'+
@@ -1233,7 +1238,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            ''+
                            '        </div>'+
                            ''+
-                           '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
+                           '        <div style="padding-bottom:10px;"> <!--img src="images/red header.png" style="width:100%;"-->  </div>'+
                            '        '+
                            '        <div style="display: inline-block;width: 100%;font-weight:bold;">'+
                            '            <div style="float: left;width: 50%;     margin-left: 10%;">'+
@@ -1255,9 +1260,9 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            ''+
                            ''+
                            '        <div style="display:inline-block;width:100%;">'+
-                           '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;    padding: 1%; padding-bottom: 2%; color: green;font-weight:bold; width: 16%;text-align: center;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
-                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 1%; padding-bottom: 2%; color: red;font-weight: bold; width: 15.5%;text-align: center; padding-right: 16%; padding-left: 2%;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
-                           '                 <div style="cursor: pointer;     float: right;padding: 3%;width: 13%;    background-size: 100% 100%;background-image: url(images/help-button.png);"  onclick="ubsApp.startHelp(\'salesHelp\')" ></div>'+
+                           '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonAction.png);background-size: 100% 100%;width: fit-content;    padding: 2%; padding-bottom: 2%; color: white;font-weight:bold; width: 16%;text-align: center;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
+                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonCancel.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 2%; padding-bottom: 2%; color: white;font-weight: bold; width: 15.5%;text-align: center; padding-right: 5%; padding-left: 2%;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
+                           '                 <div style="cursor:pointer; float: left; padding:4%; width: 15.5%; background-size: 100% 100%;background-image: url(images/buttonHelpQ.png);"  onclick="ubsApp.startHelp(\'salesHelp\')" ></div>'+
 
                            '        </div>'+
                            '</div>'+
@@ -1265,7 +1270,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
 
 
 
-ubsApp.popUpTemplate = '<div style="{{style}};{{#if showBorder}}background-image: url(images/redbgcommon.png);{{/if}}" >'+
+ubsApp.popUpTemplate = '<div id="myshopPopup" style="{{style}}" >'+
                        '    <div style="background-color: {{backgroundColor}};position: relative; min-height:10vh;max-height: 70vh;overflow: auto;   ">'+
                        ''+
                        '        <div>'+
@@ -1284,9 +1289,11 @@ ubsApp.popUpTemplate = '<div style="{{style}};{{#if showBorder}}background-image
                        '        <div style="text-align: center;margin-top: 10px;">'+
                        '            <div style="width: fit-content;margin: auto;margin-top: 2%;">'+
                        '                {{#each buttons}}'+
-
-                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content; padding: 15px; padding-bottom: 15%; color: red; font-weight:bold" onclick="{{action}}" >{{name}}'+
-
+                       '                {{#if isCancel}}'+
+                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonCancel.png);background-size: 100% 100%;width: fit-content; padding: 15px; padding-bottom: 15%; color: white; font-weight:bold" onclick="{{action}}" >{{name}}'+
+                       '                {{else}}'+
+                       '                <div id= "{{id}}" style="cursor:pointer;    float: left;margin-right: 10px;background-image: url(images/buttonAction.png);background-size: 100% 100%;width: fit-content; padding: 15px; padding-bottom: 15%; color: white; font-weight:bold" onclick="{{action}}" >{{name}}'+                       
+                       '                {{/if}}'+                       
                        '                </div>'+
                        '                {{/each}}'+
                        '            </div>'+
@@ -1307,7 +1314,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               ''+
                               '        </div>'+
                               ''+
-                              '        <div style="padding-bottom:10px;"> <img src="images/red header.png" style="width:100%;">  </div>'+
+                              '        <div style="padding-bottom:10px;"> <!--img src="images/red header.png" style="width:100%;"-->  </div>'+
                               '        '+
                               '        <div style="margin-bottom: 10px;width: fit-content;background-color: #c53f3f;color: white;padding: 3px;font-weight: bold;margin-left: 2%;">{{WeekTitle}} {{weekNumber}}</div>'+
                               '        <div style="display: inline-block;width: 96%;font-weight: bold; margin-left: 2%; margin-right: 2%;">'+
@@ -1337,7 +1344,7 @@ ubsApp.weekSummaryTemplate =  '<div style="{{style}}">'+
                               '        <div style="display:inline-block;margin-top: 10px;width:58%;">'+
                               '            <div style="float:left;margin-left: 2%;background-color: #a6a6e4;padding: 3px;font-weight: bold;max-width: 70%;width:fit-content">{{playerNameTitle}}: {{userName}}</div>'+
                               '            <div style="float:right;"> '+
-                              '                 <div style="cursor:pointer; background-image: url(images/buttonMedium.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: red;font-weight: bold;" onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove();" >{{Close}}</div>'+
+                              '                 <div style="cursor:pointer; background-image: url(images/buttonCancel.png);background-size: 100% 100%;width: fit-content;margin: auto;    padding: 7px; color: white;font-weight: bold;" onclick="ubsApp.closeCurrentScenario(); ubsApp.nextMove();" >{{Close}}</div>'+
                               '            </div>'+
                               '        </div>'+
                               '</div>'+

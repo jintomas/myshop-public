@@ -84,7 +84,7 @@ monopoly.boardTemplate='<div class="responsive">'+
 
                     '<div class="centerDiceRow">'+monopoly.rollingDiceTemplate+'</div>'+
                     '<div class="centerDiceRow">'+
-                        '<button id="rollIt" class="sideScoreBoardButton" onclick="monopoly.rollDice()" style="width: 15%;padding: 1%;padding-bottom: 2.8%;">{{rollIt}}</button>'+
+                        '<button id="rollIt" class="sideScoreBoardActionButton" onclick="monopoly.rollDice()" style="width: 15%;padding: 1%;padding-bottom: 1%;">{{rollIt}}</button>'+
                     '</div>'+
                 '</div>'+
             '</div>'+
@@ -117,7 +117,7 @@ monopoly.sideScoreBoardTemplate=
 '<div class="sideScoreBoardContainer">'+
 '        <div class="sideScoreBoardRow">'+
 '            <div class="sideScoreBoardCol"></div>'+
-'            <div class="sideScoreBoardCol"><img src="images/red header.png" style="width: 100%;"></div>                <div class="sideScoreBoardCol"></div>'+
+'            <div class="sideScoreBoardCol"><!--img src="images/red header.png" style="width: 100%;"--></div>                <div class="sideScoreBoardCol"></div>'+
 '        </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol weekTitle">{{weekTitle}}: <span id="weekContent">100</span></div>'+
@@ -125,20 +125,20 @@ monopoly.sideScoreBoardTemplate=
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol">{{bankBalanceTitle}}:</div>'+
-'        <span id="bankBalance" class="sideScoreBoardCol">₹ {{bankBalanceAmount}}</span>'+
+'        <span id="bankBalance" class="sideScoreBoardCol"> {{bankBalanceAmount}}</span>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol">{{cashTitle}}:</div>'+
-'        <span class="sideScoreBoardCol" id="cash">₹ {{cashAmount}}</span>'+
+'        <span class="sideScoreBoardCol" id="cash"> {{cashAmount}}</span>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '        <div class="sideScoreBoardCol">{{debtTitle}}:</div>'+
-'        <span id="debt" class="sideScoreBoardCol">₹ {{debtAmount}}</span>'+
+'        <span id="debt" class="sideScoreBoardCol"> {{debtAmount}}</span>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" style="font-size: 1.1vmax;" onclick="ubsApp.openTransferToBank()">{{transferTitle}}</button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" style="font-size: 1.1vmax;" onclick="ubsApp.openWithdrawFromBank()">{{withdrawTitle}}</button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" style="font-size: 1.1vmax;" onclick="ubsApp.openPayOffScenario()">{{payOffTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openTransferToBank()">{{transferTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openWithdrawFromBank()">{{withdrawTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openPayOffScenario()">{{payOffTitle}}</button>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '       <hr>'+
@@ -150,7 +150,7 @@ monopoly.sideScoreBoardTemplate=
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
 '       <div class="sideScoreBoardCol"></div>'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openPurchaseScenario(false)" style="padding-left: 7%;padding-right: 7%;">{{buy}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardActionButton" onclick="ubsApp.openPurchaseScenario(false)" style="padding-left: 7%;padding-right: 7%;">{{buy}}</button>'+
 '       <div class="sideScoreBoardCol"></div>'+
 '    </div>'+
 '    <div class="sideScoreBoardRow">'+
@@ -172,9 +172,9 @@ monopoly.sideScoreBoardTemplate=
 '  </div>'+
 '</div>'+
 '  <div class="sideScoreBoardRow">'+
-'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()" style="padding-left: 7%;padding-right: 7%;padding-bottom: 4%;">{{quizTitle}}</button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'instructionHelp\')"></button>'+
-'       <button class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()"></button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardButton" onclick="ubsApp.openQuizIfValid()" style="padding-left: 7%;padding-right: 7%;padding-bottom: 4%; width: 30%">{{quizTitle}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardEndButton" onclick="ubsApp.confirmEndGame()">{{endGame}}</button>'+
+'       <button class="sideScoreBoardCol sideScoreBoardHelpButton" onclick="ubsApp.startHelp(\'instructionHelp\')">{{help}}</button>'+
 '  </div>'+
 '</div>';
 
@@ -287,7 +287,7 @@ monopoly.endGameTemplate = '<div style="'+
                            '"> </div>'+
                            ''+
                            '<div style="'+
-                           '    background-image: url(\'images/welcomeredstrip.png\');'+
+                           '    background-image: url(\'images/welcomebluestrip.png\');'+
                            '    color: white;'+
                            '    font-weight: 700;'+
                            '    height: 10vh;'+
@@ -341,8 +341,8 @@ monopoly.endGameTemplate = '<div style="'+
                            ''+
                            '</div>'+
                            ''+
-                           '   <div style="display:flex;justify-content:space-around;flex-direction:row;"> <div style="margin-top: 10px;margin-bottom: 10px;"> <div style="cursor:pointer;background-image: url(images/buttonMedium.png);background-size: 100% 100%; width: fit-content;margin: auto;   padding: 7px;    color: green;" onClick="ubsApp.restartGame();"> {{PLAYAGAIN}} </div></div>'+
-                           ' <div style="margin-top: 10px;margin-bottom: 10px;"> <div style="cursor:pointer;background-image: url(images/buttonMedium.png);background-size: 100% 100%; width: fit-content;margin: auto;   padding: 7px;    color: red;" onClick="ubsApp.closeGame();"> {{CLOSE}} </div></div>'+
+                           '   <div style="display:flex;justify-content:space-around;flex-direction:row;"> <div style="margin-top: 10px;margin-bottom: 10px;"> <div style="cursor:pointer;background-image: url(images/buttonAction.png);background-size: 100% 100%; width: fit-content;margin: auto;   padding: 7px;    color: white;" onClick="ubsApp.restartGame();"> {{PLAYAGAIN}} </div></div>'+
+                           ' <div style="margin-top: 10px;margin-bottom: 10px;"> <div style="cursor:pointer;background-image: url(images/buttonCancel.png);background-size: 100% 100%; width: fit-content;margin: auto;   padding: 7px;    color: white;" onClick="ubsApp.closeGame();"> {{CLOSE}} </div></div>'+
                            '</div>'+
                            '</div>';
 

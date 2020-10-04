@@ -18,6 +18,8 @@ ubsApp.sideScoreBoardConfig={
             "advantageCardTitle":"{{advantageCardTitle}}",
             "convertTitle":"{{convertTitle}}",
             "quizTitle":"{{quizTitle}}",
+            "endGame":"{{endGame}}",
+            "help":"{{help}}",
         }
     ]
 }
