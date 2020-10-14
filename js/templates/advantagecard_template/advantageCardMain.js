@@ -5,6 +5,7 @@ ubsApp.getAdvantageCardTemplate=function(templateConfig,tempVar){
     templateConfig.convertReputationPointsTitle = ubsApp.getTranslation("convertReputationPointsTitle");
     templateConfig.convertReputationMessage = ubsApp.getTranslation("convertReputationMessage");
     templateConfig.CANCEL = ubsApp.getTranslation("cancelTitle");
+    templateConfig.HELP = ubsApp.getTranslation("helpTitle");
     templateConfig.OK = ubsApp.getTranslation("OK");
     templateConfig.currentWeekCash = ubsApp.getTranslation("Rs")+" "+ userArray[playerChance].getplayerScore();
     templateConfig.currentWeekBankBalance = ubsApp.getTranslation("Rs")+" "+ userArray[playerChance].getBankBalance();

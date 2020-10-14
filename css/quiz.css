@@ -141,6 +141,15 @@
 	height: auto;
 	background-size: 100% 100%;
 }
+
+.quizHelpButton1 {
+	float: right;
+	background-image: url('../images/buttonHelp.png');
+	background-color: transparent;
+	height: auto;
+	background-size: 100% 100%;
+}
+
 .quizButtons:active{
 
   box-shadow: 1px 1px  #333333;
@@ -167,7 +176,7 @@ input[class="quizButtons"]:focus {outline:0;}
     top: 80%;
     left: 1%;
     width: 15vw;
-    height: 7vw;
+    height: 10vw;
 }
 
 .quizOptionsStyle{

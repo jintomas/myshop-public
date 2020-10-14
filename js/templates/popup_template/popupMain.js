@@ -11,7 +11,8 @@ ubsApp.getPopupHtml = function(templateConfig) {
     if(!popupConfig.buttons && popupConfig.showCloseButton) {
             let button = {
                 'name' : ubsApp.getTranslation("CLOSE"),
-                'action' : "ubsApp.closePopup();" 
+                'action' : "ubsApp.closePopup();",
+                'isCancel': true
             };
 
             popupConfig.buttons = [];

@@ -36,7 +36,8 @@ ubsApp.withdrawFromBank=function(){
                             {
                                 'id':"closePopupButton",
                                 'name' : ubsApp.getTranslation("CLOSE"),
-                                'action': "ubsApp.closePopup();"
+                                'action': "ubsApp.closePopup();",
+                                'isCancel': true
                             }
                         ]
              });

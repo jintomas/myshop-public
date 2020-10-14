@@ -120,7 +120,8 @@ ubsApp.checkAnswerAndRenderNextPage=function(page, answer, optionName, questionI
 	                        {
 	                			'id':"quizWrongAnswer",
 	                            'name' : ubsApp.getTranslation("no"),
-	                            'action': "ubsApp.closePopup("+true+");ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);"
+								'action': "ubsApp.closePopup("+true+");ubsApp.displayNextQuizQuestion(\'"+ page +"\', true);",
+								'isCancel': true
 	                        }
 	                 ]
 

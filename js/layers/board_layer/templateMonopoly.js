@@ -305,7 +305,7 @@ monopoly.endGameTemplate = '<div style="'+
                            ''+
                            '            <div style="display: inline-block;width: 100%; color:{{playerColor}};">'+
                            '                <div style="float:left; height: 36px;"><img src="images/{{playerColor}}.png" style="height:100%"> </img></div>'+
-                           '            <div style=" padding-top: 19px;float: left; padding-left: 7px;">{{PLAYER}}: {{userName}} </div>'+
+                           '            <div style=" padding-top: 19px;float: left; padding-left: 7px; color: rgb(179, 62, 58)">{{PLAYER}}: {{userName}} </div>'+
                            '        </div>'+
                            ''+
                            '        <div style="display: inline-block;width: 100%;">'+

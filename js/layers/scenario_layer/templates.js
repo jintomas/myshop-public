@@ -542,9 +542,8 @@ ubsApp.quizTemplate = '<div id="quiz">'+
 '</div>'+
 '<img src="{{gameLogo}}" class="quizGameLogoImage">' +
 '<div id="quizOkButtons" style="display:flex;width:100%;margin-left:68%">'+
-'   <button id="quizDone" style="color:green" disabled class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.doneQuiz()">{{doneTitle}}</button>'+
-'   <button id="quizCancel" style="color:white; background: url(../images/buttonCancel.png);" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">{{cancelTitle}}</button>'+
-'   <button id="quizHelp" class=\'quizButtons quizHelpButtons\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')"></button>'+
+'   <button id="quizCancel" style="color:white; background-image: url(images/buttonCancel.png);" class=\'quizButtons quizSubmitButtons\' onclick="ubsApp.cancelQuiz()">{{cancelTitle}}</button>'+
+'   <button id="quizHelp" class=\'quizButtons quizHelpButton1\' onclick="ubsApp.startHelp(\'{{helpPageName}}\')">{{helpTitle}}</button>'+
 '</div>'+
 '</div>';
 
@@ -1262,8 +1261,7 @@ ubsApp.advantageCardTemplate='<div style="{{style}}">'+
                            '        <div style="display:inline-block;width:100%;">'+
                            '                 <div style="float: left;margin-left: 35%;margin-right: 11px;cursor:pointer; background-image: url(images/buttonAction.png);background-size: 100% 100%;width: fit-content;    padding: 2%; padding-bottom: 2%; color: white;font-weight:bold; width: 16%;text-align: center;" onclick="ubsApp.covertReputationToWildCard()" >{{OK}}</div>'+
                            '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonCancel.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 2%; padding-bottom: 2%; color: white;font-weight: bold; width: 15.5%;text-align: center; padding-right: 5%; padding-left: 2%;" onclick="ubsApp.closeCurrentScenario()" >{{CANCEL}}</div>'+
-                           '                 <div style="cursor:pointer; float: left; padding:4%; width: 15.5%; background-size: 100% 100%;background-image: url(images/buttonHelpQ.png);"  onclick="ubsApp.startHelp(\'salesHelp\')" ></div>'+
-
+                           '                 <div style="cursor:pointer; float: left; background-image: url(images/buttonHelp.png);background-size: 100% 100%;width: fit-content;margin: auto;  padding: 2%; padding-bottom: 2%; color: white;font-weight: bold; width: 15.5%;text-align: center; padding-right: 5%; padding-left: 2%;" onclick="ubsApp.startHelp(\'salesHelp\')" >{{HELP}}</div>'+                           
                            '        </div>'+
                            '</div>'+
                            '</div>';
